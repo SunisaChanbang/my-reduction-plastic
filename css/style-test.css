@@ -64,7 +64,7 @@
   .flex-item-right,
   .flex-item-left {
     flex: 1 1 100vw;
-    height: fit-content;
+    min-height: fit-content;
   }
   .flex-item {
     flex-basis: calc(100vw * 1 / 2 - (var(--value) - var(--value) * 1 / 4));
