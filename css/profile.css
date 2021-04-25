@@ -35,7 +35,7 @@ body {
 }
 .navbar {
   background: var(--main-bg-nav-color);
-  width: 100%;
+  width: 100vw;
   height: 60px;
   padding: 0 25px;
   display: flex;
@@ -43,7 +43,8 @@ body {
   align-items: center;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
-.btn:focus, #inlineFormInput:focus {
+.btn:focus,
+input[type="text"]:focus {
   outline: none;
   box-shadow: none;
 }
@@ -63,10 +64,10 @@ a.dropdown-item:hover {
   color: var(--main-txt-show_all-color) !important;
 }
 .btn-edit {
-    color: var(--main-bg-nav-color);
+  color: var(--main-bg-nav-color);
 }
-.btn-edit:hover{
-    color: var(--btn-hover-color);
+.btn-edit:hover {
+  color: var(--btn-hover-color);
 }
 /* Green */
 .success {
@@ -78,13 +79,13 @@ a.dropdown-item:hover {
   background-color: var(--main-txt-show_all-color);
   color: var(--main-bg-nav-color);
 }
-.container{
-    background-color: var(--main-txt-show_all-color);
+.container {
+  background-color: var(--main-txt-show_all-color);
 }
-.block{
-    width: fit-content;
-    height: fit-content;
-    padding-top: 4rem;
+.block {
+  width: fit-content;
+  height: fit-content;
+  padding-top: 4rem;
 }
 
 /* Gray */
@@ -94,10 +95,12 @@ a.dropdown-item:hover {
   background-color: var(--main-bg-nav-color);
   color: var(--main-txt-show_all-color);
   border-radius: 50%;
-  width: auto;
-  height: 42px;
+  width: 3rem;
+  height: 3rem;
 }
-
+i {
+  font-size: 1em;
+}
 .default:hover {
   background-color: var(--main-bg-nav-color);
   color: var(--btn-hover-color);
@@ -105,20 +108,26 @@ a.dropdown-item:hover {
 .img_proflie {
   width: 250px;
 }
-.form-row{
-    width: fit-content;
+#input-name{
+  width: 290px;
 }
-#inlineFormInput:read-only{
-    background-color: inherit;
-    border: inherit;
-    width: min-content;
-    color: var(--main-bg-nav-color);
-    font-weight: 600;
+ .form-control {
+  /* max-width: 140px; */
+  /* font-size: 1rem; */
 }
-#inlineFormInput:read-write{
-    background-color: var(--main-bg-nav-color);
-    border: 2px solid var(--main-txt-color);
-    color: var(--main-txt-show_all-color);
+input[type="text"]:read-only {
+  background-color: inherit;
+  border: inherit;
+  color: var(--main-bg-nav-color);
+  font-weight: 600;
+}
+input[type="text"]:read-write {
+  background-color: var(--main-bg-nav-color);
+  border: 2px solid var(--main-txt-color);
+  color: var(--main-txt-show_all-color);
+}
+.input-sizer{
+  resize: both;
 }
 /* // Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) {
@@ -135,5 +144,8 @@ a.dropdown-item:hover {
   }
   .img_proflie {
     width: 160px;
+  }
+  .form-row {
+    width: 100vw;
   }
 }

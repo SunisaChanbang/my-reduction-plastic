@@ -25,7 +25,7 @@
 
             <div class="nav-item pr-4 position-relative">
                 <a class="notifi" data-toggle="modal" href="/page/notification.html" data-target="#notifi"><i
-                        class="far fa-bell" style="font-size: 1.5em"></i><span
+                        class="far fa-bell"></i><span
                         class="badge position-absolute top-0 left-100 translate-middle badge-danger">4</span>
                 </a>
             </div>
@@ -53,42 +53,51 @@
         </div>
     </nav>
 
-    <div class="container justify-content-center">
-        <div class="mx-auto d-block block position-relative">
-            <img src="/pictures/_MG_8982.jpg" class="rounded-circle mx-auto d-block img_proflie" />
-            <button class="btn default position-absolute translate-middle">
-                <i class="fas fa-camera"></i>
-            </button>
-        </div>
-        <form>
-            <div class="form-row align-items-center justify-content-center mt-4">
-                <div class="col-3">
-                    <input type="text" class="form-control mb-2" id="inlineFormInput" placeholder="Sunisa" readonly/>
-                </div>
-                <div class="col-3">
-                    <input type="text" class="form-control mb-2" id="inlineFormInput" placeholder="Chanbang" readonly/>
-                </div>
-                <div class="col-auto">
+    <div class="container">
+        <div>
+            <div class="mx-auto block position-relative">
+                <img src="/pictures/_MG_8982.jpg" class="rounded-circle mx-auto d-block img_proflie" />
+                <button class="btn default position-absolute translate-middle">
+                    <i class="fas fa-camera"></i>
+                </button>
+            </div>
+            <!-- <div class="input-group justify-content-center">
+                <div class="input-group-append">
+                    <input type="text" class="form-control" size="6" id="fname" value="Sunisa" readonly />
+                    <input type="text" class="form-control" size="6" id="lname" value="Chanbang" readonly />
                     <button class="btn btn-edit" data-toggle="switch" value="true" onclick="editName()">
-                        <i class="fa fa-edit fa-lg"></i>
+                        <i class="fa fa-edit"></i>
+                    </button>
+                </div>
+            </div> -->
+            <div id="input-name" class="mx-auto row justify-content-center mt-4 ml-0 mr-0">
+
+                <div class="col-5 p-0">
+                    <input type="text" class="form-control" id="fname" size="8" value="Sunisa" readonly />
+                </div>
+                <div class="col-5 p-0">
+                    <input type="text" class="form-control" id="lname" size="8" value="Chanbang" readonly />
+                </div>
+                <div class="col-auto p-0">
+                    <button class="btn btn-edit" data-toggle="switch" value="true" onclick="editName()">
+                        <i class="fa fa-edit"></i>
                     </button>
                 </div>
             </div>
-        </form>
+        </div>
     </div>
     <script>
         function editName() {
-            var x = document.getElementById("inlineFormInput").readOnly;
-            if (x == true){
+            var x = document.getElementById("fname").readOnly;
+            if (x == true) {
                 $("input").prop("readonly", false);
                 $("button i.fa").addClass("fa-save");
                 $("button i.fa").removeClass("fa-edit");
-            }else{
+            } else {
                 $("input").prop("readonly", true);
                 $("button i.fa").removeClass("fa-save");
                 $("button i.fa").addClass("fa-edit");
             }
-            
         }
     </script>
     <script src="/javascript/script.js"></script>
