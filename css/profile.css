@@ -43,19 +43,24 @@ body {
   align-items: center;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
+.btn:focus {
+    outline: none;
+    box-shadow: none;
+}
 .navbar-brand,
 .nav-item,
 .nav-link,
+a.notifi,
 a.dropdown-item {
   color: var(--main-txt-color);
 }
 .navbar-brand:hover,
 .nav-item:hover,
 .nav-link:hover,
+a.notifi:hover,
 a.dropdown-item:hover {
   background-color: inherit;
   color: var(--main-txt-show_all-color) !important;
-  fill: var(--main-txt-show_all-color);
 }
 
 /* Green */

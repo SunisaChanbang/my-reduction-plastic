@@ -19,23 +19,28 @@
     <nav class="navbar">
         <div class="container-fluid d-flex">
             <a class="navbar-brand mr-auto" href="#">
-                <img src="/pictures/recycle.png"
-                    class="d-inline-block" />
+                <img src="/pictures/recycle.png" class="d-inline-block" />
                 <span class="name">My Reduction Plastic</span>
             </a>
             <!-- Large button groups (default and split) -->
-            
-            <div class="nav-item pr-4 position-relative"><i class="far fa-bell" style="font-size: 1.5em;"></i><span class="badge position-absolute top-0 left-100 translate-middle badge-danger">4</span></div>
+
+            <div class="nav-item pr-4 position-relative">
+                <a class="notifi" data-toggle="modal" href="/page/notification.html" data-target="#notifi"><i
+                        class="far fa-bell" style="font-size: 1.5em"></i><span
+                        class="badge position-absolute top-0 left-100 translate-middle badge-danger">4</span></a>
+            </div>
             <div class="nav-item dropdown">
                 <button class="nav-link btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
                     aria-expanded="false">
-                    <img src="/pictures/profile_pic.png" alt="profile_pic">
+                    <img src="/pictures/profile_pic.png" alt="profile_pic" />
                     <span class="name">Sunisa Chanbang</span>
                     <i class="fas fa-chevron-down"></i>
                 </button>
                 <div class="dropdown-menu dropdown-menu-right">
-                    <a class="dropdown-item" href="#"><i class="fas fa-user-alt"></i> Profile
-                        <br><button class="btn success">View Profile</button>
+                    <a class="dropdown-item" href="#"><i class="fas fa-user-alt"></i> Profile <br /><button
+                            class="btn success">
+                            View Profile
+                        </button>
                     </a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="#"><i class="fas fa-history"></i> History</a>
@@ -48,16 +53,37 @@
         </div>
     </nav>
 
-    <div class="container"></div>
+    <div class="container">sssssssssssss</div>
 
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        &times;
+                    </button>
+                    <h4 class="modal-title">Modal with Dynamic Content</h4>
+                </div>
+                <div class="modal-body"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- open modal noti -->
     <script>
-        $('.openBtn').on('click',function(){
-            $('.modal-body').load('content.html',function(){
-                $('#myModal').modal({show:true});
+        $(".notifi").on("click", function () {
+            console.log(0);
+            $(".modal-body").load("/page/notification.html", function () {
+                $("#notifi").modal({ show: true });
             });
         });
-        </script>
+    </script>
 
     <script src="/javascript/script.js"></script>
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
