@@ -24,7 +24,8 @@
                 <span class="name">My Reduction Plastic</span>
             </a>
             <!-- Large button groups (default and split) -->
-            <div class="nav-item p-2"><i class="far fa-bell fa-lg"></i></div>
+            
+            <div class="nav-item pr-4 position-relative"><i class="far fa-bell" style="font-size: 1.5em;"></i><span class="badge position-absolute top-0 left-100 translate-middle badge-danger">4</span></div>
             <div class="nav-item dropdown">
                 <button class="nav-link btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
                     aria-expanded="false">
@@ -42,14 +43,22 @@
                     <a class="dropdown-item" href="#"><i class="fas fa-cog"></i> Settings</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
-
-
                 </div>
             </div>
         </div>
     </nav>
 
     <div class="container"></div>
+
+    <!-- open modal noti -->
+    <script>
+        $('.openBtn').on('click',function(){
+            $('.modal-body').load('content.html',function(){
+                $('#myModal').modal({show:true});
+            });
+        });
+        </script>
+
     <script src="/javascript/script.js"></script>
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
