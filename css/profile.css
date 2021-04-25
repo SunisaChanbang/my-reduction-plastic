@@ -43,9 +43,9 @@ body {
   align-items: center;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
-.btn:focus {
-    outline: none;
-    box-shadow: none;
+.btn:focus, #inlineFormInput:focus {
+  outline: none;
+  box-shadow: none;
 }
 .navbar-brand,
 .nav-item,
@@ -62,7 +62,12 @@ a.dropdown-item:hover {
   background-color: inherit;
   color: var(--main-txt-show_all-color) !important;
 }
-
+.btn-edit {
+    color: var(--main-bg-nav-color);
+}
+.btn-edit:hover{
+    color: var(--btn-hover-color);
+}
 /* Green */
 .success {
   background-color: var(--main-txt-color);
@@ -73,18 +78,48 @@ a.dropdown-item:hover {
   background-color: var(--main-txt-show_all-color);
   color: var(--main-bg-nav-color);
 }
+.container{
+    background-color: var(--main-txt-show_all-color);
+}
+.block{
+    width: fit-content;
+    height: fit-content;
+    padding-top: 4rem;
+}
 
 /* Gray */
 .default {
-  background-color: var(--main-txt-show_all-color);
-  color: black;
+  right: 0;
+  bottom: 0;
+  background-color: var(--main-bg-nav-color);
+  color: var(--main-txt-show_all-color);
+  border-radius: 50%;
+  width: auto;
+  height: 42px;
 }
 
 .default:hover {
-  background-color: var(--main-txt-show_all-color);
-  color: white;
+  background-color: var(--main-bg-nav-color);
+  color: var(--btn-hover-color);
 }
-
+.img_proflie {
+  width: 250px;
+}
+.form-row{
+    width: fit-content;
+}
+#inlineFormInput:read-only{
+    background-color: inherit;
+    border: inherit;
+    width: min-content;
+    color: var(--main-bg-nav-color);
+    font-weight: 600;
+}
+#inlineFormInput:read-write{
+    background-color: var(--main-bg-nav-color);
+    border: 2px solid var(--main-txt-color);
+    color: var(--main-txt-show_all-color);
+}
 /* // Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) {
   span.name,
@@ -95,7 +130,10 @@ a.dropdown-item:hover {
     padding-left: 0px;
     padding-right: 0px;
   }
-  .nav-link{
-      padding-right: 0px;
+  .nav-link {
+    padding-right: 0px;
+  }
+  .img_proflie {
+    width: 160px;
   }
 }
