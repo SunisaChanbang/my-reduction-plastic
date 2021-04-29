@@ -1,14 +1,5 @@
 $(document).ready(function(){
-  $(".profile .icon_wrap").click(function(){
-    $(this).parent().toggleClass("active");
-    $(".notifications").removeClass("active");
-  });
-
-  $(".notifications .icon_wrap").click(function(){
-    $(this).parent().toggleClass("active");
-     $(".profile").removeClass("active");
-  });
-
+  
   $(".show_all .link").click(function(){
     $(".notifications").removeClass("active");
     $(".popup").show();
@@ -18,3 +9,9 @@ $(document).ready(function(){
     $(".popup").hide();
   });
 });
+
+function editName(x) {
+  console.log(x)
+      x.classList.toggle("fa-save");
+      x.classList.toggle("fa-edit");
+}

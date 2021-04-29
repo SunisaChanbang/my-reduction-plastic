@@ -27,12 +27,6 @@
                 <span class="name">My Reduction Plastic</span>
             </a>
 
-            <!-- <div class="nav-item pr-4 position-relative">
-                <a class="notifi" data-toggle="modal" href="/page/notification.html" data-target="#notifi"><i
-                        class="far fa-bell"></i><span
-                        class="badge position-absolute top-0 left-100 translate-middle badge-danger">4</span>
-                </a>
-            </div> -->
             <div class="nav-item dropdown">
                 <button class="nav-link btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
                     aria-expanded="false">
@@ -65,43 +59,20 @@
                     <i class="fas fa-camera"></i>
                 </button>
             </div>
-            <!-- <div class="input-group justify-content-center">
-                <div class="input-group-append">
-                    <input type="text" class="form-control" size="6" id="fname" value="Sunisa" readonly />
-                    <input type="text" class="form-control" size="6" id="lname" value="Chanbang" readonly />
-                    <button class="btn btn-edit" data-toggle="switch" value="true" onclick="editName()">
-                        <i class="fa fa-edit"></i>
-                    </button>
-                </div>
-            </div> -->
-            <div id="input-name" class="mx-auto row justify-content-center mt-4 ml-0 mr-0">
+            <div id="input-name" class="row d-flex justify-content-center mt-4 mx-auto">
 
-                <div class="col-5 p-0">
+                <div class="col-5 p-0 text-end">
                     <input type="text" class="form-control" id="fname" size="8" value="Sunisa" readonly />
                 </div>
                 <div class="col-5 p-0">
                     <input type="text" class="form-control" id="lname" size="8" value="Chanbang" readonly />
                 </div>
-                <div class="col-auto p-0">
-                    <button class="btn btn-edit" data-toggle="switch" value="true" onclick="editName()">
-                        <i class="fa fa-edit"></i>
-                    </button>
+                <div class="col-auto p-0 align-self-center" style="width: 18px;">
+                        <i class="fa fa-edit btn-edit" onclick="editName(this)"></i>
                 </div>
             </div>
         </div>
     </div>
-    <script>
-        function editName() {
-            var x = document.getElementById("fname").readOnly;
-            if (x == true) {
-                $("button i.fa").addClass("fa-save");
-                $("button i.fa").removeClass("fa-edit");
-            } else {
-                $("button i.fa").removeClass("fa-save");
-                $("button i.fa").addClass("fa-edit");
-            }
-        }
-    </script>
     <script src="/javascript/script.js"></script>
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

@@ -111,7 +111,9 @@ i {
 #input-name{
   width: 290px;
 }
-
+#fname, #lname{
+  max-width: 100px;
+}
 input[type="text"]:read-only {
   background-color: inherit;
   border: inherit;
