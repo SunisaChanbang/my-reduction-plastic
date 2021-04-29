@@ -111,10 +111,7 @@ i {
 #input-name{
   width: 290px;
 }
- .form-control {
-  /* max-width: 140px; */
-  /* font-size: 1rem; */
-}
+
 input[type="text"]:read-only {
   background-color: inherit;
   border: inherit;
