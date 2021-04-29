@@ -108,12 +108,10 @@ i {
 .img_proflie {
   width: 250px;
 }
-#input-name{
+/* #input-name{
   width: 290px;
-}
-#fname, #lname{
-  max-width: 100px;
-}
+} */
+
 input[type="text"]:read-only {
   background-color: inherit;
   border: inherit;
@@ -148,3 +146,4 @@ input[type="text"]:read-write {
     width: 100vw;
   }
 }
+
