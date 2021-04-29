@@ -90,11 +90,9 @@
         function editName() {
             var x = document.getElementById("fname").readOnly;
             if (x == true) {
-                $("input").prop("readonly", false);
                 $("button i.fa").addClass("fa-save");
                 $("button i.fa").removeClass("fa-edit");
             } else {
-                $("input").prop("readonly", true);
                 $("button i.fa").removeClass("fa-save");
                 $("button i.fa").addClass("fa-edit");
             }
