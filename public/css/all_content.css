@@ -235,3 +235,7 @@ span.nav-content-active {
   text-decoration: none;
   font-weight: 700;
 }
+
+img.img-last-blog {
+  max-width: 100%;
+}
