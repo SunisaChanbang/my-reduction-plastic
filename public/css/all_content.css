@@ -205,3 +205,33 @@ footer {
   letter-spacing: 2px;
   text-decoration: none;
 }
+
+p.text-tags {
+  padding-top: 15px;
+  font-size: 14px;
+}
+
+.text-tags a {
+  color: var(--main-txt-color);
+  text-decoration: none;
+}
+
+p.nav-content {
+  padding-top: 15px;
+  font-size: 14px;
+}
+
+.nav-content a {
+  color: rgb(85, 85, 85);
+  text-decoration: none;
+}
+
+.nav-content a:hover {
+  text-decoration: underline;
+}
+
+span.nav-content-active {
+  color: var(--main-txt-color);
+  text-decoration: none;
+  font-weight: 700;
+}
