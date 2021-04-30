@@ -91,26 +91,57 @@
     </section>
 
 
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-plus shadow-sm sticky-end" data-bs-toggle="modal"
+        data-bs-target="#staticBackdrop">
+        <i class="fas fa-plus fa-lg"></i>
+    </button>
 
     <!-- Modal -->
-    <div class="modal fade" id="uploadimageModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-        aria-labelledby="uploadimageModalLabel" aria-hidden="true">
-        <div class="modal-dialog fullscreen-md-down">
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="uploadimageModalLabel">Modal title</h5>
+                    <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <div id="upload-demo" class="center-block"></div>
+                    <div class="container overflow-hidden">
+                        <div class="row">
+                            <div class="col-sm-12 col-lg-6">
+                                <div class="p-3 border bg-light">
+                                        <div class="row g-2">
+                                            <div class="col-6">
+                                                <div class="p-3 border bg-light">Custom column padding</div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="p-3 border bg-light">Custom column padding</div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="p-3 border bg-light">Custom column padding</div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="p-3 border bg-light">Custom column padding</div>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-lg-6">
+                                <div class="p-3 border bg-light">Custom column padding</div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button id="cropImageBtn" type="button" class="btn btn-primary">Crop</button>
+                    <button type="button" class="btn btn-primary">Understood</button>
                 </div>
             </div>
         </div>
     </div>
+
 
     <script src="/public/javascript/script.js"></script>
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
