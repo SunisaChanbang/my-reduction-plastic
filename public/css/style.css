@@ -362,10 +362,10 @@ a {
   padding-right: calc(100vw - (100vw - 25%));
   /* min-height: calc(100vh * 1/2 - 30px); */
 }
-.left {
-  /* margin-top: calc(100vh - (100vh - 8.5%)); */
-  /* max-height: calc(100vh - 60px); */
-}
+/* .left {
+  margin-top: calc(100vh - (100vh - 8.5%)); */
+  /* max-height: calc(100vh - 60px);
+} */
 .left a img {
   width: calc(100% - 33px);
   padding-bottom: 10px;
