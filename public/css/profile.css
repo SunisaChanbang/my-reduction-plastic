@@ -293,12 +293,16 @@ div.liner-gra  {
   animation-iteration-count: infinite;
 }
 
-.inner-ring {
+.middle-ring {
   height: 45vw;
   width: 45vw;
+  background-color: whitesmoke;
+}
+.inner-ring {
+  height: 40vw;
+  width: 40vw;
   background-color: var(--main-bg-nav-color);
 }
-
 @keyframes rotate {
     0% {transform:rotate(0deg);}
     25% {transform:rotate(90deg);}
