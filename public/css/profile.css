@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,700|Trade+Winds&display=swap");
-:root {
+/* :root {
   --main-bg-color: #c6f5e8;
   --main-txt-color: #87afa5;
   --main-bg-nav-color: #fff;
@@ -13,8 +13,8 @@
   --btn-hover-color: #64e4c2;
   --main-li-hover-color: #e2f5f0;
   --main-padding-add: 25px;
-}
-* {
+} */
+/* * {
   margin: 0;
   padding: 0;
   text-decoration: none;
@@ -26,7 +26,7 @@
 body {
   background-color: var(--main-bg-color);
   color: var(--main-txt-color);
-}
+} */
 .navbar img {
   width: 40px;
 }
@@ -73,7 +73,7 @@ a.dropdown-item:hover {
   background-color: var(--main-txt-show_all-color);
   color: var(--main-bg-nav-color);
 }
-.container {
+#Profile {
   background-color: var(--main-txt-show_all-color);
 }
 .block {
