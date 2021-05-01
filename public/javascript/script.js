@@ -104,6 +104,7 @@ $(document).ready(function () {
     } else {
       $("input").prop("readonly", true);
       document.getElementById("fname").classList.toggle("text-end")
+
     }
   }
   
