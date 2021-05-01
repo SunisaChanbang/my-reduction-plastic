@@ -226,7 +226,9 @@ button input[type="file"],
   width: 50px;
   transform: rotate(90deg);
 }
-
+#gallery img.card-img{
+  border-radius: 0 !important;
+}
 .bg-image {
   background-image: linear-gradient(
       88deg,
