@@ -63,12 +63,6 @@ a.dropdown-item:hover {
   background-color: inherit;
   color: var(--main-txt-show_all-color) !important;
 }
-.btn-edit {
-  color: var(--main-bg-nav-color);
-}
-.btn-edit:hover {
-  color: var(--btn-hover-color);
-}
 /* Green */
 .success {
   background-color: var(--main-txt-color);
@@ -94,9 +88,9 @@ a.dropdown-item:hover {
   bottom: 0;
   background-color: var(--main-bg-nav-color);
   color: var(--main-txt-show_all-color);
-  border-radius: 50%;
-  width: 3rem;
-  height: 3rem;
+  /* border-radius: 50%; */
+  width: 2.8rem;
+  height: 2.8rem;
 }
 i {
   font-size: 1em;

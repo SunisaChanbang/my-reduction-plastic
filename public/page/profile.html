@@ -68,7 +68,7 @@
                 </div>
                 <!-- <img id="imagePreview" src="/pictures/_MG_8982.jpg" class="rounded-circle d-block img_proflie" /> -->
                 <!-- Button trigger modal -->
-                <button class="btn avatar-edit default position-absolute bottom-0 end-0">
+                <button class="btn avatar-edit default rounded-circle position-absolute bottom-0 end-0">
                     <!-- type="button" data-bs-toggle="modal" data-bs-target="#uploadimageModal" -->
                     <i class="fas fa-camera"></i>
                     <input type="file" id="imageUpload" accept=".png, .jpg, .jpeg" />
@@ -78,13 +78,16 @@
             <div id="input-name" class="row d-flex justify-content-center mt-4 mx-auto">
 
                 <div class="col-5 p-0">
-                    <input type="text" class="form-control text-end fs-4" id="fname" value="Sunisa" readonly />
+                    <input type="text" class="form-control form-control-sm text-end fs-4" id="fname" value="Sunisa" readonly />
                 </div>
                 <div class="col-5 p-0">
-                    <input type="text" class="form-control fs-4" id="lname" value="Chanbang" readonly />
+                    <input type="text" class="form-control form-control-sm fs-4" id="lname" value="Chanbang" readonly />
                 </div>
-                <div class="col-auto p-0 align-self-center ml-1" style="width: 18px;">
-                    <i class="fa fa-edit btn-edit" onclick="editName(this)"></i>
+                <div class="col-auto p-0 align-self-center me-auto" style="max-width: 20px;">
+                    <button class="btn default">
+                        <i class="fa fa-edit" onclick="editName(this)"></i>
+                    </button>
+                    
                 </div>
             </div>
         </div>
@@ -92,7 +95,7 @@
 
 
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-plus shadow-sm sticky-end" data-bs-toggle="modal"
+    <button type="button" class="btn btn-plus shadow-sm fixed-bottom ms-auto m-4" data-bs-toggle="modal"
         data-bs-target="#staticBackdrop">
         <i class="fas fa-plus fa-lg"></i>
     </button>
@@ -103,7 +106,7 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                    <h5 class="modal-title" id="staticBackdropLabel">Add item</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
