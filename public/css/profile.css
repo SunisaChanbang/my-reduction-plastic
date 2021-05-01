@@ -311,6 +311,6 @@ div.liner-gra  {
     100% {transform:rotate(360deg);}
 }
 .bg-overay{
-  background-image: linear-gradient(to bottom right, #439982, #A2CC77);
+  background-image: linear-gradient(to bottom, #439982, #A2CC77);
   opacity: 50%;
 }
