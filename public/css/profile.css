@@ -137,8 +137,7 @@ input[type="number"]{
   border: none;
 }
 div.w-100.btn-group.shadow.rounded-3{
-  width: 100%;
-  max-width: 100px;
+  max-width: 90px;
 }
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
@@ -310,9 +309,10 @@ div.liner-gra {
   background-image: linear-gradient(to bottom, #439982, #a2cc77);
   opacity: 50%;
 }
-/* .card ul.list-group-flush li.list-group-item{
-  height: 80px;
-} */
+.list-group-item{
+  /* height: 80px; */
+  border: none;
+}
 
 .btn-plastic {
   /* min-width: 120px;
@@ -360,4 +360,8 @@ img.card-img.btn-type {
   border-radius: 0;
   border-top-left-radius: calc(1rem - 1px);
   border-bottom-left-radius: calc(1rem - 1px);
+}
+
+#delete{
+  /* z-index: auto; */
 }
