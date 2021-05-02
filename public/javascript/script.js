@@ -6,7 +6,7 @@ if (document.readyState == 'loading') {
 
 function ready() {
     var removeItemButtons = document.getElementsByClassName('btn btn-danger')
-    for (var i =0; i < removeItemButtons.length; i++) {
+    for (var i = 0; i < removeItemButtons.length; i++) {
         var button = removeItemButtons[i]
         button.addEventListener('click', removeItem)
     }
@@ -84,37 +84,37 @@ function addItemToList(imageSrc, title) {
 
 $(document).ready(function () {
     $(".show_all .link").click(function () {
-      $(".notifications").removeClass("active");
-      $(".popup").show();
+        $(".notifications").removeClass("active");
+        $(".popup").show();
     });
-  
+
     $(".close").click(function () {
-      $(".popup").hide();
+        $(".popup").hide();
     });
-  });
-  
-  function editName(x) {
+});
+
+function editName(x) {
     console.log(x);
     x.classList.toggle("fa-save");
     x.classList.toggle("fa-edit");
     var y = document.getElementById("fname").readOnly;
     if (y == true) {
-      $("input").prop("readonly", false);
-      document.getElementById("fname").classList.toggle("text-end")
+        $("input").prop("readonly", false);
+        document.getElementById("fname").classList.toggle("text-end")
     } else {
-      $("input").prop("readonly", true);
-      document.getElementById("fname").classList.toggle("text-end")
+        $("input").prop("readonly", true);
+        document.getElementById("fname").classList.toggle("text-end")
 
     }
-  }
-  
-  
-  // Start upload preview image
-  function readURL(input) {
+}
+
+
+// Start upload preview image
+function readURL(input) {
     if (input.files && input.files[0]) {
         var reader = new FileReader();
-        reader.onload = function(e) {
-            $('#imagePreview').css('background-image', 'url('+e.target.result +')');
+        reader.onload = function (e) {
+            $('#imagePreview').css('background-image', 'url(' + e.target.result + ')');
             // $('#imagePreview').attr("src", 'url('+e.target.result +')');
             // $('#imagePreview').attr('src', e.target.result);
             $('#imagePreview').hide();
@@ -122,7 +122,30 @@ $(document).ready(function () {
         }
         reader.readAsDataURL(input.files[0]);
     }
-  }
-  $("#imageUpload").change(function() {
+}
+$("#imageUpload").change(function () {
     readURL(this);
-  });
+});
+
+// Start upload preview image
+function readSrc(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            //Get our img element by using document.getElementById
+            var img = document.getElementById("imageAddPreview");
+
+            //Set the src property of our element to the new image URL
+            img.src = e.target.result;
+            // img.style.width = '100px';
+            // img.style.height = '100px';
+            $('#imageAddPreview').fadeOut();
+            $('#imageAddPreview').fadeIn(650);
+        }
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+$("#imageAddUpload").change(function () {
+    readSrc(this);
+});
