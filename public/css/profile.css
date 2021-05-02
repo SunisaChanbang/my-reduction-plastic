@@ -1,4 +1,4 @@
-@gport url("https://fonts.googleapis.com/css?family=Montserrat:400,600,700|Trade+Winds&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,700|Trade+Winds&display=swap");
 :root {
   --main-bg-color: #c6f5e8;
   --main-txt-color: #87afa5;
@@ -305,11 +305,11 @@ div.liner-gra {
   background-color: var(--main-border-buttom-color);
 }
 
-/* img.card-img.btn-type {
-  width: 75%;
-  height: 75%;
+img.card-img.btn-type {
+  width: 60%;
+  height: 60%;
   object-fit: scale-down;
-} */
+}
 .list-group-item .card {
   border-radius: calc(1rem - 1px);
 }
