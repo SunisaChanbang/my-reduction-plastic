@@ -122,7 +122,7 @@ input[type="text"]:read-write {
 /* ////////////////////////////// */
 
 button input[type="file"],
-.button input[type="file"] {
+.button input[type="file"], div input[type="file"] {
   position: absolute;
   top: 0;
   left: 0;
@@ -230,6 +230,9 @@ button input[type="file"],
   .form-row {
     width: 100vw;
   }
+  .card-img-start{
+    display: none;
+  }
 }
 
 
@@ -283,11 +286,21 @@ div.liner-gra  {
   /* padding-bottom: 1rem; */
 }
 .btn-plastic:hover{
-  background-color: thistle;
+  background-color: var(--main-border-buttom-color);
 }
 
 img.card-img.btn-type{
   width: 75%;
   height: 75%;
   object-fit: scale-down;
+}
+.list-group-item .card{
+  border-radius: calc(1rem - 1px);
+}
+
+.card-img-start{
+  border-top-left-radius: calc(1rem - 1px);
+  border-bottom-left-radius: calc(1rem - 1px);
+  width: 100%;
+  height: 100%;
 }
