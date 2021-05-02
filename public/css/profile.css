@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,700|Trade+Winds&display=swap");
-/* :root {
+:root {
   --main-bg-color: #c6f5e8;
   --main-txt-color: #87afa5;
   --main-bg-nav-color: #fff;
@@ -13,7 +13,7 @@
   --btn-hover-color: #64e4c2;
   --main-li-hover-color: #e2f5f0;
   --main-padding-add: 25px;
-} */
+}
 /* * {
   margin: 0;
   padding: 0;
@@ -118,9 +118,6 @@ input[type="text"]:read-write {
   border: 2px solid var(--main-txt-color);
   color: var(--main-txt-show_all-color);
 }
-.input-sizer {
-  resize: both;
-}
 
 /* ////////////////////////////// */
 
@@ -131,53 +128,11 @@ button input[type="file"],
   left: 0;
   opacity: 0;
 }
-.avatar-upload {
-  position: relative;
-  max-width: 205px;
-  margin: 50px auto;
-}
-.avatar-upload .avatar-edit {
-  position: absolute;
-  right: 12px;
-  z-index: 1;
-  top: 10px;
-}
-.avatar-upload .avatar-edit input {
-  display: none;
-}
-.avatar-upload .avatar-edit input {
-  display: inline-block;
-  width: 34px;
-  height: 34px;
-  margin-bottom: 0;
-  border-radius: 100%;
-  background: #ffffff;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
-  cursor: pointer;
-  font-weight: normal;
-  transition: all 0.2s ease-in-out;
-}
-.avatar-upload .avatar-edit input:hover {
-  background: #f1f1f1;
-}
-.avatar-upload .avatar-edit input:after {
-  content: "\f040";
-  font-family: "FontAwesome";
-  color: #757575;
-  position: absolute;
-  top: 10px;
-  left: 0;
-  right: 0;
-  text-align: center;
-  margin: auto;
-}
+
 .avatar-upload .avatar-preview {
-  width: 192px;
-  height: 192px;
-  position: relative;
-  border-radius: 100%;
-  border: 6px solid var(--main-bg-nav-color);
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  height: 200px;
+  /* border: 5px solid var(--main-bg-nav-color); */
 }
 .avatar-upload .avatar-preview > div {
   width: 100%;
@@ -313,4 +268,26 @@ div.liner-gra  {
 .bg-overay{
   background-image: linear-gradient(to bottom, #439982, #A2CC77);
   opacity: 50%;
+}
+/* .card ul.list-group-flush li.list-group-item{
+  height: 80px;
+} */
+
+.btn-plastic{
+  /* min-width: 120px;
+  min-height: 120px; */
+  width: 100%;
+  max-height: 100%;
+  object-fit: scale-down;
+  background-color: var(--main-bg-nav-color);
+  /* padding-bottom: 1rem; */
+}
+.btn-plastic:hover{
+  background-color: thistle;
+}
+
+img.card-img.btn-type{
+  width: 75%;
+  height: 75%;
+  object-fit: scale-down;
 }
