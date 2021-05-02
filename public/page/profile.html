@@ -64,7 +64,8 @@
             <div class="mx-auto block position-relative">
                 <div class="avatar-upload">
                     <div class="avatar-preview rounded-circle">
-                        <div id="imagePreview rounded-circle" style="background-image: url(http://i.pravatar.cc/500?img=7);"></div>
+                        <div id="imagePreview rounded-circle"
+                            style="background-image: url(http://i.pravatar.cc/500?img=7);"></div>
                     </div>
                 </div>
                 <!-- <img id="imagePreview" src="/pictures/_MG_8982.jpg" class="rounded-circle d-block img_proflie" /> -->
@@ -79,38 +80,38 @@
 
             <div class="container">
                 <div id="input-name" class="row row-cols-3 justify-content-md-center justify-content-end mt-4">
-                  <div class="col-sm-5 col-md-4 p-0">
-                    <input  id="fname" type="text" class="form-control text-end fs-4" value="Sunisa"readonly />
-                  </div>
-                  <div class="col-5 col-md-4 p-0">
-                    <input id="lname" type="text" class="form-control fs-4" size="ma"  value="Chanbang" readonly />
-                  </div>
-                  <div class="col-2 col-md-1 p-0">
-                    <button class="btn default">
-                        <i class="fa fa-edit" onclick="editName(this)"></i>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Challenge week -->
-            <div class="card w-75 mx-auto mt-4">
-                <div class="row row-cols-2 card-body justify-content-between">
-                    <h5 class="card-title col-12">Challenge Week</h5>
-                    <p class="card-text col-8">ลดแก้วพลาสติก 3 ชิ้น</p>
-                    <p class="card-text col-auto text-danger text-end">0/2</p>
-                </div>
-                <div class="card-footer bg-transparent">
-                    <small>สิ้นสุด 31/01/2564 23:59 น.</small>
+                    <div class="col-sm-5 col-md-4 p-0">
+                        <input id="fname" type="text" class="form-control text-end fs-4" value="Sunisa" readonly />
+                    </div>
+                    <div class="col-5 col-md-4 p-0">
+                        <input id="lname" type="text" class="form-control fs-4" size="ma" value="Chanbang" readonly />
+                    </div>
+                    <div class="col-2 col-md-1 p-0">
+                        <button class="btn default">
+                            <i class="fa fa-edit" onclick="editName(this)"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
+        </div>
+        <!-- Challenge week -->
+        <div class="card w-75 mx-auto mb-5">
+            <div class="row row-cols-2 card-body justify-content-between">
+                <h5 class="card-title col-12">Challenge Week</h5>
+                <p class="card-text col-8">ลดแก้วพลาสติก 3 ชิ้น</p>
+                <p class="card-text col-auto text-danger text-end">0/2</p>
+            </div>
+            <div class="card-footer bg-transparent">
+                <small>สิ้นสุด 31/01/2564 23:59 น.</small>
+            </div>
+        </div>
         </div>
     </section>
     <!-- section 2 -->
     <section id="award" class="container position-relative overflow-hidden bg-image d-flex p-5">
         <div class="col-md-6 p-lg-5 mx-auto my-auto text-center">
             <div class="col-6 mx-auto">
-                <img src="../IMG/recycle.png" class="card-img" alt="...">
+                <img src="/public/IMG/recycle.png" class="card-img" alt="...">
             </div>
             <h1>Rank Gold</h1>
             <h1 class="display-4 mt-4">15 Challenge</h1>
@@ -225,71 +226,87 @@
                         <div class="row">
                             <div class="col-sm-12 col-lg-6">
                                 <div class="p-0">
+                                    <!-- button plastic type -->
                                     <div id="plastic-type" class="row g-4 p-md-4">
+                                        <!-- colum-1 -->
                                         <div class="d-grid gap-4 col-6 mx-auto">
                                             <button class="btn btn-plastic shadow" type="button">
-                                                <img src="/public/IMG/plastic type/001-straw.png" class="card-img btn-type">
-                                                <br class=""><p>Straw</p>
+                                                <img src="/public/IMG/plastic type/001-straw.png"
+                                                    class="card-img btn-type">
+                                                <br class="">
+                                                <p>Straw</p>
                                             </button>
                                             <button class="btn btn-plastic shadow" type="button">
-                                                <img src="/public/IMG/plastic type/002-packaging.png" class="card-img btn-type">
-                                                <br class=""><p>Packaging</p>
-                                            </button> 
-                                            <button class="btn btn-plastic shadow" type="button">
-                                                <img src="/public/IMG/plastic type/003-bag.png" class="card-img btn-type">
-                                                <br class=""><p>Bag</p>
-                                            </button>
-                                          </div>
-                                          <div class="d-grid gap-4 col-6 mx-auto">
-                                            <button class="btn btn-plastic shadow" type="button">
-                                                <img src="/public/IMG/plastic type/004-cup.png" class="card-img btn-type">
-                                                <br class=""><p>Cup</p>
+                                                <img src="/public/IMG/plastic type/002-packaging.png"
+                                                    class="card-img btn-type">
+                                                <br class="">
+                                                <p>Packaging</p>
                                             </button>
                                             <button class="btn btn-plastic shadow" type="button">
-                                                <img src="/public/IMG/plastic type/005-bottle.png" class="card-img btn-type">
-                                                <br class=""><p>Bottle</p>
-                                            </button> 
-                                            <button class="btn btn-plastic shadow" type="button">
-                                                <img src="/public/IMG/plastic type/006-cutlery.png" class="card-img btn-type">
-                                                <br class=""><p>Cutlery</p>
+                                                <img src="/public/IMG/plastic type/003-bag.png"
+                                                    class="card-img btn-type">
+                                                <br class="">
+                                                <p>Bag</p>
                                             </button>
-                                          </div>
+                                        </div>
+                                        <!-- colum-2 -->
+                                        <div class="d-grid gap-4 col-6 mx-auto">
+                                            <button class="btn btn-plastic shadow" type="button">
+                                                <img src="/public/IMG/plastic type/004-cup.png"
+                                                    class="card-img btn-type">
+                                                <br class="">
+                                                <p>Cup</p>
+                                            </button>
+                                            <button class="btn btn-plastic shadow" type="button">
+                                                <img src="/public/IMG/plastic type/005-bottle.png"
+                                                    class="card-img btn-type">
+                                                <br class="">
+                                                <p>Bottle</p>
+                                            </button>
+                                            <button class="btn btn-plastic shadow" type="button">
+                                                <img src="/public/IMG/plastic type/006-cutlery.png"
+                                                    class="card-img btn-type">
+                                                <br class="">
+                                                <p>Cutlery</p>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-12 col-lg-6">
+                            <div class="col-sm-12 col-lg-6 mt-4">
                                 <div class="p-3 border bg-light">
                                     <h1>List</h1>
                                     <!-- start list item -->
                                     <div class="card">
                                         <ul class="list-group list-group-flush">
                                             <!-- item -->
-                                          <li class="list-group-item">
-                                            <div class="row g-0">
-                                                <div class="col-4 p-0">
-                                                  <img class="card-img" src="/public/IMG/_MG_8982.jpg" alt="...">
+                                            <li class="list-group-item">
+                                                <div class="row g-0">
+                                                    <div class="col-4 p-0">
+                                                        <img class="card-img" src="/public/IMG/_MG_8982.jpg" alt="...">
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Plastic Type</h5>
+                                                            <div class="col input-group input-group-sm">
+                                                                <button class="btn default" type="button">-</button>
+                                                                <input type="text" class="form-control"
+                                                                    aria-label="Text input with 2 + buttons">
+                                                                <button class="btn default" type="button">+</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <button class="btn default mx-auto my-auto">
+                                                            <i class="fa fa-remove" onclick=""></i>
+                                                        </button>
+                                                    </div>
                                                 </div>
-                                                <div class="col-6">
-                                                  <div class="card-body">
-                                                    <h5 class="card-title">Plastic Type</h5>
-                                                    <div class="col input-group input-group-sm">
-                                                        <button class="btn default" type="button">-</button>
-                                                        <input type="text" class="form-control" aria-label="Text input with 2 + buttons">
-                                                        <button class="btn default" type="button">+</button>
-                                                      </div>
-                                                  </div>
-                                                </div>
-                                                <div class="col-auto">
-                                                    <button class="btn default mx-auto my-auto">
-                                                        <i class="fa fa-remove" onclick=""></i>
-                                                    </button>
-                                                  </div>
-                                              </div>
-                                          </li>
-                                          <li class="list-group-item">A second item</li>
-                                          <li class="list-group-item">A third item</li>
+                                            </li>
+                                            <li class="list-group-item">A second item</li>
+                                            <li class="list-group-item">A third item</li>
                                         </ul>
-                                      </div>
+                                    </div>
                                     <!-- end list item -->
                                 </div>
                             </div>
@@ -299,7 +316,8 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-outline-primary align-text-center">Continue <i class="fas fa-long-arrow-alt-right"></i></button>
+                    <button type="button" class="btn btn-outline-primary align-text-center">Continue <i
+                            class="fas fa-long-arrow-alt-right"></i></button>
                 </div>
             </div>
         </div>
