@@ -74,22 +74,24 @@ function minusFunction() {
   document.getElementById("quantity").stepDown();
 }
 
-// logout
-const logout = document.querySelector('#logout');
-logout.addEventListener('click', (e) => {
-    e.preventDefault();
-    auth.signOut().then(() => {
-        console.log('user signed out');
-    })
-});
+// // logout
+// const logout = document.querySelector('#logout');
+// logout.addEventListener('click', (e) => {
+//     e.preventDefault();
+//     auth.signOut().then(() => {
+//         console.log('user signed out');
+//     })
+// });
 
 
-//function Switch page
-var tabButton = document.querySelectorAll('.btn-tabs')
-var tabContent = document.querySelectorAll('.section')
-tabButton.forEach(tab => {
-  tab.addEventListener('click', () => {
-    const target = document.querySelector(tab.CDATA_SECTION_NODE.tabTarget)
-    target.classList.add('active')
-  })
-})
+//function tqb page
+var tabButtons = document.querySelectorAll(".btn-group button");
+var tabPanels = document.querySelectorAll(".section");
+
+function showPanel(panelIndex) {
+    tabPanels.forEach(function(node){
+        node.style.display="block";
+    });
+    tabPanels[panelIndex].style.display="none";
+}
+showPanel(1);
