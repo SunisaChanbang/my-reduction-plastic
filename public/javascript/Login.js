@@ -66,10 +66,6 @@ $("#signup").click(function() {
           minlength: "Your password must be at least 5 characters long"
         },
         email: "Please enter a valid email address"
-      },
-    
-      submitHandler: function(form) {
-        form.submit();
       }
     });
   });

@@ -22,7 +22,7 @@
     integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
 
-  <script src="./javascript/Login.js"></script>
+
   <link rel="stylesheet" href="css/style_login.css">
   <script></script>
   <title>My Reduction Plastics</title>
@@ -32,22 +32,32 @@
   <div class="container">
     <div class="row">
       <div class="col-md-5 mx-auto">
-        <div id="first">
+<<<<<<< Updated upstream
+        <div id="modal-login" class="modals">
+=======
+        <div id="first" style="position: fixed;
+        z-index: 999;
+        top: 21vh;
+        background: #fff;
+        padding: 5vw;
+        border-radius: 1vw;
+        display: none;">
+>>>>>>> Stashed changes
           <div class="myform form ">
             <div class="logo mb-3">
               <div class="col-md-12 text-center">
                 <h1>Login</h1>
               </div>
             </div>
-            <form action="" method="post" name="login">
+            <form action="" method="post" name="login" id="login-form">
               <div class="form-group">
                 <label for="exampleInputEmail1">Email address</label>
-                <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp"
+                <input type="email" name="email" class="form-control" id="login-email" aria-describedby="emailHelp"
                   placeholder="Enter email">
               </div>
               <div class="form-group">
                 <label for="exampleInputEmail1">Password</label>
-                <input type="password" name="password" id="password" class="form-control" aria-describedby="emailHelp"
+                <input type="password" name="password" id="login-password" class="form-control" aria-describedby="emailHelp"
                   placeholder="Enter Password">
               </div>
               <div class="form-group">
@@ -76,15 +86,25 @@
 
           </div>
         </div>
-        <div id="second">
+<<<<<<< Updated upstream
+        <div id="modal-signup" class="modals">
+=======
+        <div id="second"  style="position: fixed;
+        z-index: 999;
+        top: 21vh;
+        background: #fff;
+        padding: 5vw;
+        border-radius: 1vw;
+        display: none;">
+>>>>>>> Stashed changes
           <div class="myform form ">
             <div class="logo mb-3">
               <div class="col-md-12 text-center">
-                <h1>Signup</h1>
+                <h1>Sign up</h1>
               </div>
             </div>
-            <form action="#" name="registration">
-              <div class="form-group">
+            <form action="#" name="registration" id="signup-form">
+              <!-- <div class="form-group">
                 <label for="exampleInputEmail1">First Name</label>
                 <input type="text" name="firstname" class="form-control" id="firstname" aria-describedby="emailHelp"
                   placeholder="Enter Firstname">
@@ -93,31 +113,64 @@
                 <label for="exampleInputEmail1">Last Name</label>
                 <input type="text" name="lastname" class="form-control" id="lastname" aria-describedby="emailHelp"
                   placeholder="Enter Lastname">
-              </div>
+              </div> -->
               <div class="form-group">
                 <label for="exampleInputEmail1">Email address</label>
-                <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp"
+                <input type="email" name="email" class="form-control" id="signup-email" aria-describedby="emailHelp"
                   placeholder="Enter email">
               </div>
               <div class="form-group">
                 <label for="exampleInputEmail1">Password</label>
-                <input type="password" name="password" id="password" class="form-control" aria-describedby="emailHelp"
+                <input type="password" name="password" id="signup-password" class="form-control" aria-describedby="emailHelp"
                   placeholder="Enter Password">
               </div>
               <div class="col-md-12 text-center mb-3">
-                <button type="submit" class=" btn btn-block mybtn btn-primary tx-tfm">Get Started For Free</button>
+                <button type="submit" class=" btn btn-block mybtn btn-primary tx-tfm">Sign Up</button>
               </div>
               <div class="col-md-12 ">
                 <div class="form-group">
                   <p class="text-center"><a href="#" id="signin">Already have an account?</a></p>
                 </div>
               </div>
+            </form>
           </div>
-          </form>
+          
         </div>
       </div>
     </div>
   </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-firestore.js"></script>
+  <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+      apiKey: "AIzaSyA2XQhgAbwuFiPYicCZe6QI7KzAATsBs7k",
+      authDomain: "my-reduction-plastic.firebaseapp.com",
+      projectId: "my-reduction-plastic",
+      storageBucket: "my-reduction-plastic.appspot.com",
+      messagingSenderId: "151873292628",
+      appId: "1:151873292628:web:9b3f0697776a029df5a0c1",
+      measurementId: "G-QP58M0M6HJ"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    // make auth and firestore references
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+
+    // update firestore settings
+    db.settings({ timestampsInSnapshots: true });
+  </script>
+  <script src="../javascript/auth.js"></script>
 </body>
 
 
