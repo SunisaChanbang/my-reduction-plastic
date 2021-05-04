@@ -20,6 +20,13 @@ function editName(x) {
   } else {
     $("input").prop("readonly", true);
     document.getElementById("fname").classList.toggle("text-end");
+    var inputName = document.getElementById("fname").value;
+    console.log(inputName);
+    const firebaseRef = firebase.database().ref("users".user_now);
+    console.log(firebaseRef);
+    firebaseRef.push({
+      display_name: inputName,
+    });
   }
 }
 
@@ -67,11 +74,11 @@ $("#imageAddUpload").change(function () {
   readSrc(this);
 });
 
-function plusFunction(type) {
-  document.getElementById(type).stepUp();
+function plusFunction() {
+  document.getElementById("quantity").stepUp();
 }
-function minusFunction(type) {
-  document.getElementById(type).stepDown();
+function minusFunction() {
+  document.getElementById("quantity").stepDown();
 }
 
 // // logout
