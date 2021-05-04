@@ -83,25 +83,23 @@ function minusFunction() {
 //     })
 // });
 
-
 //function tqb page
 var tabButtons = document.querySelectorAll(".btn-group button");
 var tabPanels = document.querySelectorAll(".section");
 
 function showPanel(panelIndex) {
-    tabPanels.forEach(function(node){
-        node.style.display="block";
-    });
-    tabPanels[panelIndex].style.display="none";
+  tabPanels.forEach(function (node) {
+    node.style.display = "block";
+  });
+  tabPanels[panelIndex].style.display = "none";
 }
 showPanel(1);
-
 
 //function Email Validation
 function validation() {
   var form = document.getElementById("form");
   var email = document.getElementById("email-su").value;
-  var text = document.getElementById("text")
+  var text = document.getElementById("text");
   var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
   if (email.match(pattern)) {
     form.classList.add("valid");
@@ -115,7 +113,7 @@ function validation() {
     text.style.color = "#ff0000";
   }
 
-  if (email = "") {
+  if ((email = "")) {
     form.classList.remove("valid");
     form.classList.remove("invalid");
     text.innerHTML = "";
