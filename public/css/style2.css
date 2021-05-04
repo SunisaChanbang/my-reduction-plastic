@@ -237,8 +237,19 @@ td img {
 /*-------------article-------------*/
 .card--1 .card__img,
 .card--1 .card__img--hover {
-  background-image: url(/public/IMG/index/plastic.jpg);
+  background-image: url(/public/IMG/content/3e750d39-ed46-421e-a79e-8046759cedf0.jpg);
 }
+
+.card--2 .card__img,
+.card--2 .card__img--hover {
+  background-image: url(/public/IMG/content/60a7a5e2-2823-4878-9000-fdd0e6f39ed3.jpg);
+}
+
+.card--3 .card__img,
+.card--3 .card__img--hover {
+  background-image: url(/public/IMG/content/65647511-cd1d-484e-9510-17eb379a9a11.jpg);
+}
+
 
 .card__img {
   visibility: hidden;
