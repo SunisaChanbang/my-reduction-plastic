@@ -360,6 +360,10 @@ a.text-read {
   text-decoration: none;
 }
 
+a.text-read:hover {
+  text-decoration: underline;
+}
+
 .text-read p {
   text-align: end;
 
