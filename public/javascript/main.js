@@ -80,6 +80,7 @@ function auth_google() {
     });
   }
 
+
   function sign_up() {
     display_name = document.getElementById("display_name-su").value;
     username = document.getElementById("username-su").value;
