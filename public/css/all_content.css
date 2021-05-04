@@ -254,3 +254,13 @@ img.img-last-blog {
   font-style: italic;
   padding: 5px;
 }
+
+a#link-article {
+  color: var(--main-txt-color);
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+a:hover#link-article {
+  color: rgb(4, 192, 76);
+}
