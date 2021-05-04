@@ -107,6 +107,12 @@ i {
   width: 290px;
 } */
 
+.name-profile {
+  font-size: 3rem;
+  text-align: center;
+  color: #08503d;
+}
+
 input[type="text"]:read-only {
   background-color: inherit;
   border: inherit;
