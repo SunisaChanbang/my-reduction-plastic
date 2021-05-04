@@ -237,7 +237,7 @@ td img {
 /*-------------article-------------*/
 .card--1 .card__img,
 .card--1 .card__img--hover {
-  background-image: url(/public/IMG/content/3e750d39-ed46-421e-a79e-8046759cedf0.jpg);
+  background-image: url(/public/IMG/content/AdobeStock_319739307.jpg);
 }
 
 .card--2 .card__img,
@@ -300,7 +300,6 @@ td img {
 }
 
 .card__category {
-  font-family: 'Raleway', sans-serif;
   text-transform: uppercase;
   font-size: 13px;
   letter-spacing: 2px;
@@ -312,7 +311,6 @@ td img {
 .card__title {
   margin-top: 5px;
   margin-bottom: 10px;
-  font-family: 'Roboto Slab', serif;
 }
 
 .card__by {
