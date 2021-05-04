@@ -356,6 +356,15 @@ td img {
   font-size: 25px;
 }
 
+a.text-read {
+  text-decoration: none;
+}
+
+.text-read p {
+  text-align: end;
+
+}
+
 /*-------------footer-------------*/
 footer {
   padding: 1rem;
