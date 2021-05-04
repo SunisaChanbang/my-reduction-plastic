@@ -2,7 +2,7 @@ var CONTAINER = document.getElementById("content");
 var PROFILE = document.getElementById("profile");
 var NAVBAR_RIGHT = document.getElementById("navbar_right");
 var POPUP = document.getElementsByClassName("popup");
-var user_now = { display_name: "", user: "", email: "", img_url: "" };
+var user_now = { display_name: "", username: "", email: "", img_url: "" };
 
 var firebaseConfig = {
   apiKey: "AIzaSyA2XQhgAbwuFiPYicCZe6QI7KzAATsBs7k",
@@ -32,8 +32,8 @@ function auth_google() {
       var token = credential.accessToken;
       // The signed-in user info.
       var user = result.user;
-      user_now["name"] = user.displayName;
-      user_now["id"] = user.uid;
+      user_now["display_name"] = user.displayName;
+      user_now["username"] = user.uid;
       user_now["email"] = user.email;
       user_now["img_url"] = user.photoURL;
       console.log(user.displayName, user.uid, user.email, user.photoURL);
@@ -71,7 +71,7 @@ function auth_google() {
           not_found_user = false;
           console.log(doc.data().display_name, doc.data().id, doc.data().email, doc.data().image);
           user_now["display_name"] = doc.data().display_name;
-          user_now["username"] = doc.data().id;
+          user_now["username"] = doc.id;
           user_now["email"] = doc.data().email;
           user_now["img_url"] = doc.data().image;
           profile_setup_page()// BE USER
@@ -129,34 +129,25 @@ function auth_google() {
       image: "https://i.pinimg.com/736x/89/90/48/899048ab0cc455154006fdb9676964b3.jpg",
       plastic_reduction: {
         sum: 0,
-        container_type: {
-          00001: {
-            image: "-",
-            description: "-",
-            date: "-"
-          }
+        straw_type: {
+          sum: 0
+        },
+        cup_type: {
+          sum: 0
+        },
+        package_type: {
+          sum: 0
         },
         bottle_type: {
-          00001: {
-            image: "-",
-            description: "-",
-            date: "-"
-          }
+          sum: 0
         },
         bag_type: {
-          00001: {
-            image: "-",
-            description: "-",
-            date: "-"
-          }
+          sum: 0
         },
-        other_type: {
-          00001: {
-            image: "-",
-            description: "-",
-            date: "-"
-          }
-        },
+        cutlery_type: {
+          sum: 0
+        }
+       
       }
     })
       .then(() => {
@@ -164,3 +155,5 @@ function auth_google() {
         return false;
       });
   }
+
+  
