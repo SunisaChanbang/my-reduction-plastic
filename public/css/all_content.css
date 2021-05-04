@@ -93,6 +93,16 @@ a.dropdown-item:hover {
   color: var(--btn-hover-color);
 }
 
+.success {
+  background-color: var(--main-txt-color);
+  color: var(--main-bg-nav-color);
+}
+
+.success:hover {
+  background-color: var(--main-txt-show_all-color);
+  color: var(--main-bg-nav-color);
+}
+
 /* .section {
   display: none;
 } */

@@ -93,6 +93,15 @@ a.dropdown-item:hover {
   color: var(--btn-hover-color);
 }
 
+.success {
+  background-color: var(--main-txt-color);
+  color: var(--main-bg-nav-color);
+}
+
+.success:hover {
+  background-color: var(--main-txt-show_all-color);
+  color: var(--main-bg-nav-color);
+}
 
 /* // Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) {
