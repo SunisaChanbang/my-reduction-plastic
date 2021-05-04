@@ -79,15 +79,18 @@
             </div>
 
             <div class="container">
-                <div id="input-name" class="row row-cols-3 justify-content-md-center justify-content-end mt-4">
-                    <!-- <div class="col-sm-5 col-md-4 p-0">
-                        <input id="fname" type="text" class="form-control text-end fs-4" value="Sunisa" readonly />
+                <div id="input-name" class="row row-cols-2 justify-content-md-center justify-content-end mt-4  mx-auto">
+                    <!-- <div class="col-sm-5 col-md-4 p-0"> -->
+                    <div class="col-10">
+                        <input id="fname" type="text" class="form-control text-end fs-4" value="Sunisa Chanbang"
+                            readonly />
                     </div>
-                    <div class="col-5 col-md-4 p-0">
-                        <input id="lname" type="text" class="form-control fs-4" size="ma" value="Chanbang" readonly />
-                    </div> -->
-                    <span class="name-profile">Sunisa Chanbang</span>
-                    <div class="col-2 col-md-1 p-0">
+                    <!-- <div class="col-5 col-md-4 p-0"> -->
+                    <!-- <input id="lname" type="text" class="form-control fs-4" size="ma" value="Chanbang" readonly /> -->
+                    <!-- </div> -->
+                    <!-- <span class="name-profile">Sunisa Chanbang</span> -->
+                    <!-- <div class="col-2 col-md-1 p-0"> -->
+                    <div class="col-2">
                         <button class="btn default">
                             <i class="fa fa-edit" onclick="editName(this)"></i>
                         </button>
@@ -222,7 +225,7 @@
                     <h5 class="modal-title" id="staticBackdropLabel">Add item</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                 <!-- start modal body -->
+                <!-- start modal body -->
                 <div class="modal-body">
                     <div class="container overflow-hidden">
                         <div class="row">
@@ -232,19 +235,22 @@
                                     <div id="plastic-type" class="row g-2 p-md-4">
                                         <!-- colum-1 -->
                                         <div class="d-grid gap-4 col-5 mx-auto">
-                                            <button class="btn btn-plastic shadow" type="button" onclick="add_plastics_reduction_list('straw')">
+                                            <button class="btn btn-plastic shadow" type="button"
+                                                onclick="add_plastics_reduction_list('straw')">
                                                 <img src="/public/IMG/plastic type/001-straw.png"
                                                     class="card-img btn-type">
                                                 <br class="">
                                                 <p>Straw</p>
                                             </button>
-                                            <button class="btn btn-plastic shadow" type="button" onclick="add_plastics_reduction_list('package')">
+                                            <button class="btn btn-plastic shadow" type="button"
+                                                onclick="add_plastics_reduction_list('package')">
                                                 <img src="/public/IMG/plastic type/002-packaging.png"
                                                     class="card-img btn-type">
                                                 <br class="">
                                                 <p>Package</p>
                                             </button>
-                                            <button class="btn btn-plastic shadow" type="button" onclick="add_plastics_reduction_list('bag')">
+                                            <button class="btn btn-plastic shadow" type="button"
+                                                onclick="add_plastics_reduction_list('bag')">
                                                 <img src="/public/IMG/plastic type/003-bag.png"
                                                     class="card-img btn-type">
                                                 <br class="">
@@ -253,19 +259,22 @@
                                         </div>
                                         <!-- colum-2 -->
                                         <div class="d-grid gap-4 col-5 mx-auto">
-                                            <button class="btn btn-plastic shadow" type="button" onclick="add_plastics_reduction_list('cup')">
+                                            <button class="btn btn-plastic shadow" type="button"
+                                                onclick="add_plastics_reduction_list('cup')">
                                                 <img src="/public/IMG/plastic type/004-cup.png"
                                                     class="card-img btn-type">
                                                 <br class="">
                                                 <p>Cup</p>
                                             </button>
-                                            <button class="btn btn-plastic shadow" type="button" onclick="add_plastics_reduction_list('bottle')">
+                                            <button class="btn btn-plastic shadow" type="button"
+                                                onclick="add_plastics_reduction_list('bottle')">
                                                 <img src="/public/IMG/plastic type/005-bottle.png"
                                                     class="card-img btn-type">
                                                 <br class="">
                                                 <p>Bottle</p>
                                             </button>
-                                            <button class="btn btn-plastic shadow" type="button" onclick="add_plastics_reduction_list('cutlery')">
+                                            <button class="btn btn-plastic shadow" type="button"
+                                                onclick="add_plastics_reduction_list('cutlery')">
                                                 <img src="/public/IMG/plastic type/006-cutlery.png"
                                                     class="card-img btn-type">
                                                 <br class="">
@@ -296,13 +305,15 @@
                                                     <div class="card-body p-0">
                                                         <h5 class="card-title my-1">Package</h5>
                                                         <!-- quantity of plastic -->
-                                                        <p class="card-text"><div class="align-self-center">
-                                                                <div class="w-100 btn-group shadow rounded-3" role="group">
-                                                                    <button class="btn" onclick="minusFunction()">-</button>
-                                                                    <input type="number" step="1" id="quantity" name="quantity" min="1" max="10" value="1" slot="2">
-                                                                    <button class="btn" onclick="plusFunction()">+</button>
-                                                                </div>
+                                                        <p class="card-text">
+                                                        <div class="align-self-center">
+                                                            <div class="w-100 btn-group shadow rounded-3" role="group">
+                                                                <button class="btn" onclick="minusFunction()">-</button>
+                                                                <input type="number" step="1" id="quantity"
+                                                                    name="quantity" min="1" max="10" value="1" slot="2">
+                                                                <button class="btn" onclick="plusFunction()">+</button>
                                                             </div>
+                                                        </div>
                                                         </p>
                                                     </div>
                                                 </div>
@@ -310,7 +321,9 @@
                                                     <!-- <button class="btn btn-remove btn-outline-primary" data-bs-toggle="modal" data-bs-target="#delete">
                                                         <i class="fas fa-trash-alt"></i>
                                                     </button> -->
-                                                    <a class="btn btn-remove btn-outline-primary" data-bs-toggle="modal" href="#delete" role="button"><i class="fas fa-trash-alt"></i></a>
+                                                    <a class="btn btn-remove btn-outline-primary" data-bs-toggle="modal"
+                                                        href="#delete" role="button"><i
+                                                            class="fas fa-trash-alt"></i></a>
 
                                                 </div>
                                             </div>
@@ -334,22 +347,23 @@
     </div>
 
     <!-- Modal delete -->
-  <div class="modal fade" id="delete" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="deleteLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-sm">
-      <div class="modal-content shadow-lg">
-        <div class="modal-header">
-          <h5 class="modal-title" id="deleteLabel">Delete Item</h5>
+    <div class="modal fade" id="delete" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="deleteLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content shadow-lg">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteLabel">Delete Item</h5>
+                </div>
+                <div class="modal-body">
+                    คุณต้องการลบ item ออกจากรายการใช่หรือไม่
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary">Accept</button>
+                </div>
+            </div>
         </div>
-        <div class="modal-body">
-            คุณต้องการลบ item ออกจากรายการใช่หรือไม่
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
-          <button type="button" class="btn btn-primary">Accept</button>
-        </div>
-      </div>
     </div>
-  </div>
     <!--footer-->
     <footer>
         <div class="container">
@@ -392,35 +406,35 @@
             </div>
     </footer>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
 
-  <!-- TODO: Add SDKs for Firebase products that you want to use
+    <!-- TODO: Add SDKs for Firebase products that you want to use
       https://firebase.google.com/docs/web/setup#available-libraries -->
-  <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-analytics.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-firestore.js"></script>
-  <script>
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-    var firebaseConfig = {
-      apiKey: "AIzaSyA2XQhgAbwuFiPYicCZe6QI7KzAATsBs7k",
-      authDomain: "my-reduction-plastic.firebaseapp.com",
-      projectId: "my-reduction-plastic",
-      storageBucket: "my-reduction-plastic.appspot.com",
-      messagingSenderId: "151873292628",
-      appId: "1:151873292628:web:9b3f0697776a029df5a0c1",
-      measurementId: "G-QP58M0M6HJ"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    firebase.analytics();
-    // make auth and firestore references
-    const auth = firebase.auth();
-    const db = firebase.firestore();
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-firestore.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyA2XQhgAbwuFiPYicCZe6QI7KzAATsBs7k",
+            authDomain: "my-reduction-plastic.firebaseapp.com",
+            projectId: "my-reduction-plastic",
+            storageBucket: "my-reduction-plastic.appspot.com",
+            messagingSenderId: "151873292628",
+            appId: "1:151873292628:web:9b3f0697776a029df5a0c1",
+            measurementId: "G-QP58M0M6HJ"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        // make auth and firestore references
+        const auth = firebase.auth();
+        const db = firebase.firestore();
 
-    // update firestore settings
-    db.settings({ timestampsInSnapshots: true });
-  </script>
+        // update firestore settings
+        db.settings({ timestampsInSnapshots: true });
+    </script>
     <script src="/public/javascript/script.js"></script>
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"

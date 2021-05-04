@@ -103,9 +103,9 @@ i {
   max-width: 250px;
   max-height: 250px;
 }
-/* #input-name{
+#input-name{
   width: 290px;
-} */
+}
 
 .name-profile {
   font-size: 3rem;
