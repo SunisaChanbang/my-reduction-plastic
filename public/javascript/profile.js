@@ -219,7 +219,7 @@ function profile_setup_page() {
         <i class="fas fa-plus fa-lg"></i>
     </button>
     <!-- Modal add -->
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    <div class="modal fade" id="staticBackdrop" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
@@ -318,7 +318,7 @@ function profile_setup_page() {
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btn-primary" onclick='delete_item();'>Accept</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick='delete_item();'>Accept</button>
                 </div>
             </div>
         </div>
