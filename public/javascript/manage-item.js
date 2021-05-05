@@ -85,8 +85,7 @@ function add_to_database() {
                             date: "-"
                         }
                     }
-                    db.collection('users').doc(user_now.username).set({plastic_reduction:USER_PR_OBJ}).then(() => {console.log('Document successfully written!');});
-                    sign_in(user_now.username, "-");
+                    db.collection('users').doc(user_now.username).set({plastic_reduction:USER_PR_OBJ}, { merge: true });
                 }
 
             } else {
