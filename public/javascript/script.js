@@ -80,10 +80,10 @@ $("#imageAddUpload").change(function () {
 });
 
 function plusFunction() {
-  document.getElementById("quantity").stepUp();
+  document.getElementById(type).stepUp();
 }
 function minusFunction() {
-  document.getElementById("quantity").stepDown();
+  document.getElementById(type).stepDown();
 }
 
 // // logout
@@ -132,6 +132,7 @@ function validation() {
     text.style.color = "#00ff00";
   }
 }
+
 // firebase database //
 var plastic_reduction_sum = 20000;
 var bottle_type = 3;
