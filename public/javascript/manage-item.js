@@ -8,7 +8,7 @@ function add_plastics_reduction_list(type) {
     else {
         add_item_list.push(type);
         list = document.getElementById("list");
-        list.insertAdjacentHTML("beforeend", "<li class='list-group-item p-0 " + type + "'> <div class='card mb-3 shadow'> <div class='row row-cols-3 g-0 d-flex justify-content-between'> <!-- upload image --> <div id='framePreview' class='col-md-4 position-relative'> <div class='col p-0 card-img-overlay'> <img id='imageAddPreview' class='card-img-start' src='/public/IMG/_MG_8982.jpg' alt='...'> </div> <input type='file' id='imageAddUpload' accept='.png, .jpg, .jpeg' /> </div> <!-- Name type --> <div class='col-md-6 p ps-md-4'> <div class='card-body p-0'> <h5 class='card-title my-1'>" + type + "</h5> <!-- quantity of plastic --> <p class='card-text'><div class='align-self-center'> <div class='w-100 btn-group shadow rounded-3' role='group'> <button class='btn' onclick='minusFunction(&quot;" + type + "&quot;)'>-</button> <input type='number' step='1' id='" + type + "' name='" + type + "' min='1' max='10' value='1' slot='2'> <button class='btn' onclick='plusFunction(&quot;" + type + "&quot;)'>+</button> </div> </div> </p> </div> </div> <div class='col-2 my-auto'> <!-- <button class='btn btn-remove btn-outline-primary' data-bs-toggle='modal' data-bs-target='#delete'> <i class='fas fa-trash-alt'></i> </button> --> <a class='btn btn-remove btn-outline-primary' data-bs-toggle='modal' href='#delete' role='button'><i class='fas fa-trash-alt'></i></a> </div> </div> </div> </li>");
+        list.insertAdjacentHTML("beforeend", "<li id='"+type+"_addpanel'class='list-group-item p-0'> <div class='card mb-3 shadow'> <div class='row row-cols-3 g-0 d-flex justify-content-between'> <!-- upload image --> <div id='framePreview' class='col-md-4 position-relative'> <div class='col p-0 card-img-overlay'> <img id='imageAddPreview' class='card-img-start' src='/public/IMG/_MG_8982.jpg' alt='...'> </div> <input type='file' id='imageAddUpload' accept='.png, .jpg, .jpeg' /> </div> <!-- Name type --> <div class='col-md-6 p ps-md-4'> <div class='card-body p-0'> <h5 class='card-title my-1'>" + type + "</h5> <!-- quantity of plastic --> <p class='card-text'><div class='align-self-center'> <div class='w-100 btn-group shadow rounded-3' role='group'> <button class='btn' onclick='minusFunction(&quot;" + type + "&quot;)'>-</button> <input type='number' step='1' id='" + type + "' name='" + type + "' min='1' max='10' value='1' slot='2'> <button class='btn' onclick='plusFunction(&quot;" + type + "&quot;)'>+</button> </div> </div> </p> </div> </div> <div class='col-2 my-auto'> <!-- <button class='btn btn-remove btn-outline-primary' data-bs-toggle='modal' data-bs-target='#delete'> <i class='fas fa-trash-alt'></i> </button> --> <a class='btn btn-remove btn-outline-primary' data-bs-toggle='modal' href='#delete' role='button' onclick='pre_delete_item(&quot;"+type+"&quot;);'><i class='fas fa-trash-alt'></i></a> </div> </div> </div> </li>");
     }
 }
 function add_to_database() {
@@ -86,6 +86,7 @@ function add_to_database() {
                         }
                     }
                     db.collection('users').doc(user_now.username).set({plastic_reduction:USER_PR_OBJ}).then(() => {console.log('Document successfully written!');});
+                    sign_in(user_now.username, "-");
                 }
 
             } else {
@@ -97,4 +98,15 @@ function add_to_database() {
         });    
     }
 
+}
+
+var item;
+function pre_delete_item(type){
+    item = type;
+}
+function delete_item(){
+    item = item+"_addpanel";
+    console.log(item);
+    document.getElementById(item).remove();
+    item = '';
 }

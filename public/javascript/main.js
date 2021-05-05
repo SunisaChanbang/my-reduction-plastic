@@ -3,6 +3,7 @@ var PROFILE = document.getElementById("profile");
 var NAVBAR_RIGHT = document.getElementById("navbar_right");
 var POPUP = document.getElementsByClassName("popup");
 var user_now = { display_name: "", username: "", email: "", img_url: "" };
+var user_storage;
 
 var firebaseConfig = {
   apiKey: "AIzaSyA2XQhgAbwuFiPYicCZe6QI7KzAATsBs7k",
@@ -63,23 +64,22 @@ function auth_google() {
     console.log(username, password);
     db.collection("users").get().then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
-        // doc.data() is never undefined for query doc snapshots
-        console.log(doc.id, doc.data().paswd);
+
         // BE USER
         if (doc.id == username) {
           alert('This be user');
           not_found_user = false;
-          console.log(doc.data().display_name, doc.data().id, doc.data().email, doc.data().image);
+          user_storage = doc.data();
           user_now["display_name"] = doc.data().display_name;
           user_now["username"] = doc.id;
           user_now["email"] = doc.data().email;
           user_now["img_url"] = doc.data().image;
+          
           profile_setup_page()// BE USER
         };
       });
     });
   }
-
 
   function sign_up() {
     display_name = document.getElementById("display_name-su").value;

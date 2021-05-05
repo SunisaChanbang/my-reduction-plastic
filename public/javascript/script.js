@@ -74,11 +74,11 @@ $("#imageAddUpload").change(function () {
   readSrc(this);
 });
 
-function plusFunction() {
-  document.getElementById("quantity").stepUp();
+function plusFunction(type) {
+  document.getElementById(type).stepUp();
 }
-function minusFunction() {
-  document.getElementById("quantity").stepDown();
+function minusFunction(type) {
+  document.getElementById(type).stepDown();
 }
 
 // // logout
