@@ -23,7 +23,7 @@ function editName(x) {
     var inputName = document.getElementById("fname").value;
     console.log(inputName);
     // Add a new document in collection "cities"
-    db.collection("users").doc(user_now.username).set({
+    db.collection("users").doc(user_now.username).push({
         display_name: inputName,
       })
       .then(() => {
