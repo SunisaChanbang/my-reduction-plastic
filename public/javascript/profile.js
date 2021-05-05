@@ -5,7 +5,7 @@ function profile_setup_page() {
   cnsole.innerHTML = "";
   body_page.innerHTML = "";
 
-    cnsole.insertAdjacentHTML('afterbegin', "<button type='button' class='nav-link btn dropdown-toggle' data-bs-toggle='dropdown'aria-expanded='false'>     <img src='"+user_now.img_url+"' class='rounded-circle' alt='profile_pic' />     <span class='name'>"+ user_now.display_name +"</span>     <i class='fas fa-chevron-down'></i> </button> <div class='dropdown-menu dropdown-menu-end'>     <a class='dropdown-item' href='#'><i class='fas fa-user-alt'></i> Profile <br /><button             class='btn success'>View Profile</button></a><div class='dropdown-divider'></div> <a class='dropdown-item' href='#' onclick='home_setup_page()'><i class='fas fa-home'></i> Home</a> <div class='dropdown-divider'> </div> <a class='dropdown-item' href='#'><i class='fas fa-history'></i> History</a><div class='dropdown-divider'></div><a class='dropdown-item' href='#'><i class='fas fa-cog'></i> Settings</a><div class='dropdown-divider'></div><a class='dropdown-item' id='logout' href='#'><i class='fas fa-sign-out-alt'></i> Logout</a></div>");
+    cnsole.insertAdjacentHTML('afterbegin', "<button type='button' class='nav-link btn dropdown-toggle' data-bs-toggle='dropdown'aria-expanded='false'>     <img src='"+user_now.img_url+"' class='rounded-circle' alt='profile_pic' />     <span class='name'>"+ user_now.display_name +"</span>     <i class='fas fa-chevron-down'></i> </button> <div class='dropdown-menu dropdown-menu-end'>     <a class='dropdown-item' href='#'><i class='fas fa-user-alt'></i> Profile <br /><button             class='btn success' onclick='profile_setup_page()'>View Profile</button></a><div class='dropdown-divider'></div> <a class='dropdown-item' href='#' onclick='home_setup_page()'><i class='fas fa-home'></i> Home</a> <div class='dropdown-divider'> </div> <a class='dropdown-item' href='#'><i class='fas fa-history'></i> History</a><div class='dropdown-divider'></div><a class='dropdown-item' href='#'><i class='fas fa-cog'></i> Settings</a><div class='dropdown-divider'></div><a class='dropdown-item' id='logout' href='#'><i class='fas fa-sign-out-alt'></i> Logout</a></div>");
 
     body_page.insertAdjacentHTML("afterbegin", `
     <!-- section 1 -->
@@ -15,7 +15,7 @@ function profile_setup_page() {
                 <div class="avatar-upload">
                     <div class="avatar-preview rounded-circle">
                         <div class="rounded-circle" id="imagePreview"
-                            style="background-image: url(http://i.pravatar.cc/500?img=7);"></div>
+                            style="background-image: url(`+user_now.img_url+`);"></div>
                     </div>
                 </div>
                 <!-- <img id="imagePreview" src="/pictures/_MG_8982.jpg" class="rounded-circle d-block img_proflie" /> -->
@@ -33,7 +33,7 @@ function profile_setup_page() {
                     <!-- <div class="col-sm-5 col-md-4 p-0"> -->
                     <div class="col-10">
                         <input id="fname" type="text" class="form-control name-profile text-center fs-4"
-                            value="Sunisa Chanbang" readonly />
+                            value="`+user_now.display_name+`" readonly />
                     </div>
                     <!-- <div class="col-5 col-md-4 p-0"> -->
                     <!-- <input id="lname" type="text" class="form-control fs-4" size="ma" value="Chanbang" readonly /> -->
@@ -198,7 +198,7 @@ function profile_setup_page() {
                 </div>
                 <!-- icon equal -->
                 <div class="col align-self-center my-5">
-                    <i class="fas fa-equals fa-5x"></i>
+                    <h1>Switch on</h1>
                 </div>
                 <!-- something equal weight -->
                 <div class="col mx-auto">

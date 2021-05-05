@@ -44,12 +44,12 @@
             <i class="fas fa-chevron-down"></i>
           </button>
           <div class="dropdown-menu dropdown-menu-end">
-            <a class="dropdown-item" href="#"><i class="fas fa-user-alt"></i> Profile <br /><button class="btn success">
+            <a class="dropdown-item" href="#" ><i class="fas fa-user-alt"></i> Profile <br /><button class="btn success" onclick="profile_setup_page()">
                 View Profile
               </button>
             </a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#"><i class="fas fa-history"></i> History</a>
+            <a class="dropdown-item" href="#" onclick="home_setup_page()"><i class="fas fa-home"></i> Home</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#"><i class="fas fa-history"></i> History</a>
             <div class="dropdown-divider"></div>
@@ -233,7 +233,7 @@
       <div class="col-sm-4 col-lg-4" data-aos="fade-up">
         <article class="card card--1">
           <div class="card__img"></div>
-          <a href="content_01.html" class="card_link">
+          <a href="content_01.html" class="card_link" onclick="content01_setup_page()">
             <!--img hover-->
             <div class="card__img--hover" data-bs-toggle="modal" data-bs-target="#exampleModal-1"></div>
           </a>
@@ -243,14 +243,14 @@
             </span>
             <h2 class="card__title">I Am Plastic : พลาสติกคืออะไร?
             </h2>
-            <a href="content_01.html" class="btn btn-outline-success">อ่านเพิ่มเติม</a>
+            <a href="content_01.html" class="btn btn-outline-success" onclick="content01_setup_page()">อ่านเพิ่มเติม</a>
           </div>
         </article>
       </div>
       <div class="col-sm-4 col-lg-4" data-aos="fade-up">
         <article class="card card--2">
           <div class="card__img"></div>
-          <a href="content_02.html" class="card_link">
+          <a href="content_02.html" class="card_link" onclick="content02_setup_page()">
             <!--img hover-->
             <div class="card__img--hover" data-bs-toggle="modal" data-bs-target="#exampleModal-1"></div>
           </a>
@@ -260,14 +260,14 @@
             </span>
             <h2 class="card__title">7 ประเภทขยะพลาสติกที่รีไซเคิลได้
             </h2>
-            <a href="content_02.html" class="btn btn-outline-success">อ่านเพิ่มเติม</a>
+            <a href="content_02.html" class="btn btn-outline-success" onclick="content02_setup_page()">อ่านเพิ่มเติม</a>
           </div>
         </article>
       </div>
       <div class="col-sm-4 col-lg-4" data-aos="fade-up">
         <article class="card card--3">
           <div class="card__img"></div>
-          <a href="content_03.html" class="card_link">
+          <a href="content_03.html" class="card_link" onclick="content03_setup_page()">
             <!--img hover-->
             <div class="card__img--hover" data-bs-toggle="modal" data-bs-target="#exampleModal-1"></div>
           </a>
@@ -277,11 +277,11 @@
             </span>
             <h2 class="card__title">ทำไมต้องลดการใช้พลาสติก?
             </h2>
-            <a href="content_03.html" class="btn btn-outline-success">อ่านเพิ่มเติม</a>
+            <a href="content_03.html" class="btn btn-outline-success" onclick="content03_setup_page()">อ่านเพิ่มเติม</a>
           </div>
         </article>
       </div>
-      <a href="all_content.html" class="text-read">
+      <a href="all_content.html" class="text-read" onclick="allcontent_setup_page()">
         <p>อ่านทั้งหมด >></p>
       </a>
 
@@ -301,10 +301,10 @@
         </div>
 
         <div class="col-12 col-sm-6 col-md-5 col-lg-4">
-          <a href="home.html">Home</a> <br>
-          <a href="all_content.html">Article</a> <br>
-          <a href="profile.html">Profile</a> <br>
-          <a href="home.html">Challenge</a>
+          <a href="home.html" onclick="home_setup_page()">Home</a> <br>
+          <a href="all_content.html" onclick="allcontent_setup_page()">Article</a> <br>
+          <a href="profile.html" onclick="profile_setup_page()">Profile</a> <br>
+          <a href="home.html" onclick="home_setup_page()">Challenge</a>
         </div>
 
         <div class="col-12 col-md-2 col-lg-4 my-2 my-md-0 d-flex align-self-stretch justify-content-end">
