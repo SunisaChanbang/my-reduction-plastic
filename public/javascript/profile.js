@@ -18,7 +18,7 @@ function profile_setup_page() {
                             style="background-image: url(`+user_now.img_url+`);"></div>
                     </div>
                 </div>
-                <!-- <img id="imagePreview" src="/pictures/_MG_8982.jpg" class="rounded-circle d-block img_proflie" /> -->
+                <!-- <img id="imagePreview" src="/pictures/photo.png" class="rounded-circle d-block img_proflie" /> -->
                 <!-- Button trigger modal -->
                 <button class="btn avatar-edit default rounded-circle position-absolute bottom-0 end-0">
                     <!-- type="button" data-bs-toggle="modal" data-bs-target="#uploadimageModal" -->
@@ -78,44 +78,44 @@ function profile_setup_page() {
             <div class="bg-overay h-100 w-100 position-absolute"></div>
             <div class="row row-cols-4 row-cols-sm-4 row-cols-md-4 g-0">
                 <div class="col">
-                    <img src="/public/IMG/_MG_8982.jpg" class="card-img" alt="...">
+                    <img src="/public/IMG/photo.png" class="card-img" alt="...">
                 </div>
                 <div class="col">
-                    <img src="/public/IMG/_MG_8982.jpg" class="card-img" alt="...">
+                    <img src="/public/IMG/photo.png" class="card-img" alt="...">
                 </div>
                 <div class="col">
-                    <img src="/public/IMG/_MG_8982.jpg" class="card-img" alt="...">
+                    <img src="/public/IMG/photo.png" class="card-img" alt="...">
                 </div>
                 <div class="col">
-                    <img src="/public/IMG/_MG_8982.jpg" class="card-img" alt="...">
-                </div>
-            </div>
-            <div class="row row-cols-4 row-cols-sm-4 row-cols-md-4 g-0">
-                <div class="col">
-                    <img src="/public/IMG/_MG_8982.jpg" class="card-img" alt="...">
-                </div>
-                <div class="col">
-                    <img src="/public/IMG/_MG_8982.jpg" class="card-img" alt="...">
-                </div>
-                <div class="col">
-                    <img src="/public/IMG/_MG_8982.jpg" class="card-img" alt="...">
-                </div>
-                <div class="col">
-                    <img src="/public/IMG/_MG_8982.jpg" class="card-img" alt="...">
+                    <img src="/public/IMG/photo.png" class="card-img" alt="...">
                 </div>
             </div>
             <div class="row row-cols-4 row-cols-sm-4 row-cols-md-4 g-0">
                 <div class="col">
-                    <img src="/public/IMG/_MG_8982.jpg" class="card-img" alt="...">
+                    <img src="/public/IMG/photo.png" class="card-img" alt="...">
                 </div>
                 <div class="col">
-                    <img src="/public/IMG/_MG_8982.jpg" class="card-img" alt="...">
+                    <img src="/public/IMG/photo.png" class="card-img" alt="...">
                 </div>
                 <div class="col">
-                    <img src="/public/IMG/_MG_8982.jpg" class="card-img" alt="...">
+                    <img src="/public/IMG/photo.png" class="card-img" alt="...">
                 </div>
                 <div class="col">
-                    <img src="/public/IMG/_MG_8982.jpg" class="card-img" alt="...">
+                    <img src="/public/IMG/photo.png" class="card-img" alt="...">
+                </div>
+            </div>
+            <div class="row row-cols-4 row-cols-sm-4 row-cols-md-4 g-0">
+                <div class="col">
+                    <img src="/public/IMG/photo.png" class="card-img" alt="...">
+                </div>
+                <div class="col">
+                    <img src="/public/IMG/photo.png" class="card-img" alt="...">
+                </div>
+                <div class="col">
+                    <img src="/public/IMG/photo.png" class="card-img" alt="...">
+                </div>
+                <div class="col">
+                    <img src="/public/IMG/photo.png" class="card-img" alt="...">
                 </div>
             </div>
         </div>
