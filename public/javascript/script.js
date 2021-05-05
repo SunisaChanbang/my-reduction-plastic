@@ -22,11 +22,10 @@ function editName(x) {
     document.getElementById("fname").classList.toggle("text-end");
     var inputName = document.getElementById("fname").value;
     console.log(inputName);
-    const firebaseRef = firebase.database().ref("users".user_now);
-    console.log(firebaseRef);
-    firebaseRef.push({
-      display_name: inputName,
-    });
+    // Add a new document in collection "cities"
+    db.collection("users").doc(user_now.username).set({
+      display_name: inputName
+    }, { merge: true });
   }
 }
 
