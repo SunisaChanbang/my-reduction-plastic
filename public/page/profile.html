@@ -13,6 +13,7 @@
     <script src="https://kit.fontawesome.com/1902964bee.js" crossorigin="anonymous"></script>
     <!-- css -->
     <link rel="stylesheet" href="/public/css/profile.css" />
+    <link rel="stylesheet" href="../css/loading.css" />
     <!-- css -->
     <link rel="stylesheet" href="/public/css/all_content.css" />
     <title>My Reduction Plastic</title>
@@ -21,6 +22,17 @@
 </head>
 
 <body>
+    <div class="backdrop">
+        <div class="rounded-circle bg-white shadow-lg"></div>
+        <div class="loading">
+            <div class="hourglass">
+            </div>
+            <div class="cell">
+                <div class="pl pl-hourglass shadow-lg"></div>
+            </div>
+
+        </div>
+    </div>
     <nav class="navbar">
         <div class="container-fluid d-flex">
             <a class="navbar-brand mr-auto" href="#">
@@ -44,12 +56,17 @@
                     </button>
                     <div class="dropdown-menu dropdown-menu-end">
                         <a class="dropdown-item" href="#"><i class="fas fa-user-alt"></i> Profile <br /><button
+<<<<<<< Updated upstream
                                 class="btn success">
+=======
+                                class="btn success" onclick="profile_setup_page()">
+>>>>>>> Stashed changes
                                 View Profile
                             </button>
                         </a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#" onclick="home_setup_page()"><i class="fas fa-home"></i> Home</a>
+                        <a class="dropdown-item" href="#" onclick="home_setup_page()"><i class="fas fa-home"></i>
+                            Home</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#"><i class="fas fa-history"></i> History</a>
                         <div class="dropdown-divider"></div>
@@ -183,6 +200,7 @@
     <section id="equal" class="container position-relative overflow-hidden bg-image d-flex p-5">
         <div class="container">
             <div class="row text-center">
+<<<<<<< Updated upstream
                     <!-- Weight of plastic -->
                     <div class="card col-6 mx-auto ">
                         <div class="card-body mx-auto">
@@ -192,9 +210,20 @@
                             <div class="col text-center">
                                 <h1 class="display-2"><span class="nWeight">15</span> Kg.</h1>
                             </div>
+=======
+                <!-- Weight of plastic -->
+                <div class="card col-6 mx-auto ">
+                    <div class="card-body mx-auto">
+                        <h5 class="card-title">You've reduced plastic</h5>
+                        <img src="/public/IMG/weight.png" class="card-img w-50 m-2" alt="...">
+
+                        <div class="col text-center">
+                            <h1 class="display-2"><span>15</span> Kg.</h1>
+>>>>>>> Stashed changes
                         </div>
                     </div>
                 </div>
+            </div>
         </div>
     </section>
     <!-- section 5 -->
@@ -217,7 +246,7 @@
                 <!-- icon equal -->
                 <div class="col align-self-center my-5">
                     <h1>Save enough energy</h1>
-                    
+
                 </div>
                 <!-- something equal weight -->
                 <div class="col mx-auto">
@@ -262,7 +291,7 @@
                     </div>
                 </div>
             </div>
-            </div>
+        </div>
         </div>
     </section>
     <!-- Button trigger modal -->

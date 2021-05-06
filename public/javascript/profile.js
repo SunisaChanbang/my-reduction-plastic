@@ -340,7 +340,7 @@ function profile_setup_page() {
                 <!-- end modal body -->
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-outline-primary align-text-center">Continue <i
+                    <button type="button" class="btn btn-outline-primary align-text-center" data-bs-dismiss="modal">Continue <i
                             class="fas fa-long-arrow-alt-right"></i>
                     </button>
                 </div>
