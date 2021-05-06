@@ -8,6 +8,7 @@ var user_storage;
 var firebaseConfig = {
   apiKey: "AIzaSyA2XQhgAbwuFiPYicCZe6QI7KzAATsBs7k",
   authDomain: "my-reduction-plastic.firebaseapp.com",
+  databaseURL: "my-reduction-plastic.firebaseio.com",
   projectId: "my-reduction-plastic",
   storageBucket: "my-reduction-plastic.appspot.com",
   messagingSenderId: "151873292628",
@@ -19,8 +20,9 @@ firebase.initializeApp(firebaseConfig);
 var database = firebase.database();
 var db = firebase.firestore();
 firebase.analytics();
-
 var starCountRef = firebase.database().ref('users');
+var storage = firebase.storage();
+var ref = firebase.storage().ref();
 function auth_google() {
   var provider = new firebase.auth.GoogleAuthProvider();
   firebase.auth()
@@ -64,7 +66,7 @@ function auth_google() {
     console.log(username, password);
     db.collection("users").get().then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
-
+        // doc.data() is never undefined for query doc snapshots
         // BE USER
         if (doc.id == username) {
           alert('This be user');
