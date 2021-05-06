@@ -29,7 +29,6 @@
 }
 
 body {
-  background-color: var(--main-bg-color);
   color: var(--main-txt-color);
 }
 
@@ -163,7 +162,7 @@ q.head-text {
   background: url(/public/IMG/index/plastic.jpg) no-repeat fixed 100% 100%;
   background-size: cover;
   color: var(--main-txt-color);
-  height: 100%;
+  height: 100vh;
   width: 100%;
   text-align: center;
 }
