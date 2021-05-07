@@ -57,7 +57,6 @@ function auth_google() {
     username = document.getElementById("username").value;
     password = document.getElementById("password").value;
     sign_in(username, password);
-    calPlastic();
   }
   
   var not_found_user = true; // 0 = NOT BE USER
@@ -157,8 +156,8 @@ function auth_google() {
       });
   }
 
-function calPlastic() {
-  db.collection("users").doc().get().then((doc) =>{
-  console.log.bottle_type;
+db.collection("users").get().then((snapshot) => {
+  snapshot.docs.forEach(doc => {
+    renderUser(doc);
   })
-}
+});
