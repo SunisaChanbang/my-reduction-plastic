@@ -157,9 +157,8 @@ function auth_google() {
       });
   }
 
-
 function calPlastic() {
-  db.collection("users").doc(user_storage = doc.data()).get().then((doc) =>{
+  db.collection("users").doc().get().then((doc) =>{
   console.log.bottle_type;
   })
 }
