@@ -1,5 +1,6 @@
 var USER_PR_OBJ;
 var add_item_list = [];
+var bundle_all_type = [];
 function add_plastics_reduction_list(type) {
     if (type == add_item_list[0] || type == add_item_list[1] || type == add_item_list[2] ||
         type == add_item_list[3] || type == add_item_list[4] || type == add_item_list[5]) {
@@ -40,8 +41,9 @@ function add_to_database() {
                                     description: "-",
                                     total: straw_total,
                                     image: url,
-                                    date: "-"
+                                    date: new Date()
                                 }
+                                USER_PR_OBJ.straw_type.sum += straw_total;
                                 db.collection('users').doc(user_now.username).set({ plastic_reduction: USER_PR_OBJ }, { merge: true });
                             });
                     }
@@ -62,8 +64,9 @@ function add_to_database() {
                                     description: "-",
                                     total: cup_total,
                                     image: url,
-                                    date: "-"
+                                    date: new Date()
                                 }
+                                USER_PR_OBJ.cup_type.sum += cup_total;
                                 db.collection('users').doc(user_now.username).set({ plastic_reduction: USER_PR_OBJ }, { merge: true });
                             });
                     }
@@ -83,8 +86,9 @@ function add_to_database() {
                                     description: "-",
                                     total: package_total,
                                     image: url,
-                                    date: "-"
+                                    date: new Date()
                                 }
+                                USER_PR_OBJ.package_type.sum += package_total;
                                 db.collection('users').doc(user_now.username).set({ plastic_reduction: USER_PR_OBJ }, { merge: true });
                             });
                     }
@@ -104,8 +108,9 @@ function add_to_database() {
                                     description: "-",
                                     total: bottle_total,
                                     image: url,
-                                    date: "-"
+                                    date: new Date()
                                 }
+                                USER_PR_OBJ.bottle_type.sum += bottle_total;
                                 db.collection('users').doc(user_now.username).set({ plastic_reduction: USER_PR_OBJ }, { merge: true });
                             });
                     }
@@ -125,8 +130,9 @@ function add_to_database() {
                                     description: "-",
                                     total: bag_total,
                                     image: url,
-                                    date: "-"
+                                    date: new Date()
                                 }
+                                USER_PR_OBJ.bag_type.sum += bag_total;
                                 db.collection('users').doc(user_now.username).set({ plastic_reduction: USER_PR_OBJ }, { merge: true });
                             });
                     }
@@ -146,11 +152,13 @@ function add_to_database() {
                                     description: "-",
                                     total: cutlery_total,
                                     image: url,
-                                    date: "-"
+                                    date: new Date()
                                 }
+                                USER_PR_OBJ.cutlery_type.sum += cutlery_total;
                                 db.collection('users').doc(user_now.username).set({ plastic_reduction: USER_PR_OBJ }, { merge: true });
                             });
                     }
+                    USER_PR_OBJ.sum += USER_PR_OBJ.straw_type.sum + USER_PR_OBJ.cup_type.sum + USER_PR_OBJ.package_type.sum + USER_PR_OBJ.bottle_type.sum + USER_PR_OBJ.bag_type.sum + USER_PR_OBJ.cutlery_type.sum;
                     db.collection('users').doc(user_now.username).set({ plastic_reduction: USER_PR_OBJ }, { merge: true });
                 }
 
@@ -175,4 +183,152 @@ function delete_item() {
     console.log(item);
     document.getElementById(item).remove();
     item = '';
+}
+
+
+function allitem_page(){
+    db.collection("users").doc(user_now.username).get().then((doc) => {
+        user_storage = doc.data();
+        user_straw_rd = user_storage.plastic_reduction.straw_type;
+        user_cup_rd = user_storage.plastic_reduction.cup_type;
+        user_package_rd = user_storage.plastic_reduction.package_type;
+        user_bottle_rd = user_storage.plastic_reduction.bottle_type;
+        user_bag_rd = user_storage.plastic_reduction.bag_type;
+        user_cutlery_rd = user_storage.plastic_reduction.bag_type;
+    
+    body_page.innerHTML = '';
+    body_page.insertAdjacentHTML("afterbegin", `<p></p>
+    <div class="all_item">
+
+        <div class="menu" onclick="">
+            <img src="https://icon-library.com/images/plastic-icon/plastic-icon-16.jpg" alt="" srcset="">
+        </div>
+
+    </div>
+    <div class="container list-item">
+        <div class="row justify-content-md-center">
+            <div class="col-1 text-center">
+                <a onclick="show_item_page('straw')">
+                    STRAW
+                </a>
+            </div>
+            <div class="col-1 text-center">
+                <a onclick="show_item_page('cup')">
+                    CUP
+                </a>
+            </div>
+            <div class="col-1 text-center">
+                <a onclick="show_item_page('package')">
+                    PACKAGE
+                </a>
+            </div>
+            <div class="col-1 text-center">
+                <a onclick="show_item_page('bottle')">
+                    BOTTLE
+                </a>
+            </div>
+            <div class="col-1 text-center">
+                <a onclick="show_item_page('bag')">
+                    BAG
+                </a>
+            </div>
+            <div class="col-1 text-center">
+                <a onclick="show_item_page('cutlery')">
+                    CUTLERY
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <p></p>
+            <p></p>
+        </div>
+        <div id="show-list-item" class="row justify-content-md-reft">
+
+        </div>
+    </div>`);
+
+    item_page = document.getElementById("show-list-item")
+
+    for (i in user_straw_rd){
+        if(user_straw_rd[i].image != undefined){
+            console.log(user_straw_rd[i])
+            item_page.insertAdjacentHTML("afterbegin", `
+                <div class="col-3 text-center">
+                    <img src="`+user_straw_rd[i].image+`" alt="">
+                </div>`);
+        }
+    }
+    });
+
+}
+
+function show_item_page(type){
+    item_page = document.getElementById("show-list-item")
+    item_page.innerHTML = "";
+    if(type == 'straw'){
+        for (i in user_straw_rd){
+            if(user_straw_rd[i].image != undefined){
+                console.log(user_straw_rd[i])
+                item_page.insertAdjacentHTML("afterbegin", `
+                    <div class="col-3 text-center">
+                        <img src="`+user_straw_rd[i].image+`" alt="">
+                    </div>`);
+            }
+        }
+    }
+    else if(type == 'cup'){
+        for (i in user_cup_rd){
+            if(user_cup_rd[i].image != undefined){
+                console.log(user_cup_rd[i])
+                item_page.insertAdjacentHTML("afterbegin", `
+                    <div class="col-3 text-center">
+                        <img src="`+user_cup_rd[i].image+`" alt="">
+                    </div>`);
+            }
+        }
+    }
+    else if(type == 'package'){
+        for (i in user_package_rd){
+            if(user_package_rd[i].image != undefined){
+                console.log(user_package_rd[i])
+                item_page.insertAdjacentHTML("afterbegin", `
+                    <div class="col-3 text-center">
+                        <img src="`+user_package_rd[i].image+`" alt="">
+                    </div>`);
+            }
+        }
+    }
+    else if(type == 'bottle'){
+        for (i in user_bottle_rd){
+            if(user_bottle_rd[i].image != undefined){
+                console.log(user_bottle_rd[i])
+                item_page.insertAdjacentHTML("afterbegin", `
+                    <div class="col-3 text-center">
+                        <img src="`+user_bottle_rd[i].image+`" alt="">
+                    </div>`);
+            }
+        }
+    }
+    else if(type == 'bag'){
+        for (i in user_bag_rd){
+            if(user_bag_rd[i].image != undefined){
+                console.log(user_bag_rd[i])
+                item_page.insertAdjacentHTML("afterbegin", `
+                    <div class="col-3 text-center">
+                        <img src="`+user_bag_rd[i].image+`" alt="">
+                    </div>`);
+            }
+        }
+    }
+    else if(type == 'cutlery'){
+        for (i in user_cutlery_rd){
+            if(user_cutlery_rd[i].image != undefined){
+                console.log(user_cutlery_rd[i])
+                item_page.insertAdjacentHTML("afterbegin", `
+                    <div class="col-3 text-center">
+                        <img src="`+user_cutlery_rd[i].image+`" alt="">
+                    </div>`);
+            }
+        }
+    }
 }

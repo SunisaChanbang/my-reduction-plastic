@@ -276,8 +276,8 @@ div.liner-gra {
 }
 
 .outer-ring {
-  width: 50vw;
-  height: 50vw;
+  width: 35vw;
+  height: 35vw;
   background-image: linear-gradient(to bottom right, #439982, #a2cc77);
 
   /*  Rotate  */
@@ -287,13 +287,13 @@ div.liner-gra {
 }
 
 .middle-ring {
-  height: 45vw;
-  width: 45vw;
+  height: 30vw;
+  width: 30vw;
   background-color: whitesmoke;
 }
 .inner-ring {
-  height: 40vw;
-  width: 40vw;
+  height: 30vw;
+  width: 30vw;
   background-color: var(--main-bg-nav-color);
 }
 @keyframes rotate {
@@ -373,3 +373,44 @@ img.card-img.btn-type {
 /* #delete{ */
   /* z-index: auto; */
 /* } */
+.all_item{
+  position: absolute;
+  z-index: 999;
+  top: 25vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.all_item .menu{
+  background: #fff;
+    text-align: center;
+    padding-top: 21px;
+    width: 150px;
+    height: 150px;
+    border-radius: 80px;
+}
+.all_item .menu:hover{
+  background:#307a59;
+  transition: 0.2s;
+}
+
+.all_item .menu img{
+  width: 100px;
+  height: 100px;
+}
+
+.list-item {
+  padding-top: 30vh;
+}
+.list-item .col-1:hover{
+  text-decoration: overline;
+  transition: 0.2s;
+}
+.list-item img{
+  width: 300px;
+  height: 300px;
+}
+
+#show-list-item .col-3{
+  overflow: hidden;
+}

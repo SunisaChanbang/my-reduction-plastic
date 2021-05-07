@@ -4,6 +4,8 @@ var NAVBAR_RIGHT = document.getElementById("navbar_right");
 var POPUP = document.getElementsByClassName("popup");
 var user_now = { display_name: "", username: "", email: "", img_url: "" };
 var user_storage;
+var cnsole = document.getElementById("console");
+var body_page = document.getElementById("body_page");
 
 var firebaseConfig = {
   apiKey: "AIzaSyA2XQhgAbwuFiPYicCZe6QI7KzAATsBs7k",
@@ -20,7 +22,6 @@ var database = firebase.database();
 var db = firebase.firestore();
 firebase.analytics();
 var storage = firebase.storage();
-var ref = firebase.storage().ref();
 var starCountRef = firebase.database().ref('users');
 function auth_google() {
   var provider = new firebase.auth.GoogleAuthProvider();
@@ -70,12 +71,10 @@ function auth_google() {
         if (doc.id == username) {
           alert('This be user');
           not_found_user = false;
-          user_storage = doc.data();
           user_now["display_name"] = doc.data().display_name;
           user_now["username"] = doc.id;
           user_now["email"] = doc.data().email;
           user_now["img_url"] = doc.data().image;
-          
           profile_setup_page()// BE USER
         };
       });

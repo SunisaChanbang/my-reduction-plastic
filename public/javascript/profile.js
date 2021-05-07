@@ -1,13 +1,29 @@
+var gallery_profile = [];
+var user_straw_rd, user_cup_rd, user_package_rd, user_bottle_rd, user_bag_rd, user_cutlery_rd;
+
+
 function profile_setup_page() {
-  cnsole = document.getElementById("console");
-  body_page = document.getElementById("body_page");
+    db.collection("users").doc(user_now.username).get().then((doc) => {
+        user_storage = doc.data();
+        user_straw_rd = user_storage.plastic_reduction.straw_type;
+        user_cup_rd = user_storage.plastic_reduction.cup_type;
+        user_package_rd = user_storage.plastic_reduction.package_type;
+        user_bottle_rd = user_storage.plastic_reduction.bottle_type;
+        user_bag_rd = user_storage.plastic_reduction.bag_type;
+        user_cutlery_rd = user_storage.plastic_reduction.cutlery_type;
+        for (i in user_straw_rd) { if (user_straw_rd[i].image != undefined) { gallery_profile.push(user_straw_rd[i]) } }
+        for (i in user_cup_rd) { if (user_cup_rd[i].image != undefined) { gallery_profile.push(user_cup_rd[i]); } }
+        for (i in user_package_rd) { if (user_package_rd[i].image != undefined) { gallery_profile.push(user_package_rd[i]); } }
+        for (i in user_bottle_rd) { if (user_bottle_rd[i].image != undefined) { gallery_profile.push(user_bottle_rd[i]); } }
+        for (i in user_bag_rd) { if (user_bag_rd[i].image != undefined) { gallery_profile.push(user_bag_rd[i]); } }
+        for (i in user_cutlery_rd) { if (user_cutlery_rd[i].image != undefined) { gallery_profile.push(user_cutlery_rd[i]); } }
 
-  cnsole.innerHTML = "";
-  body_page.innerHTML = "";
+        cnsole.innerHTML = "";
+        body_page.innerHTML = "";
 
-    cnsole.insertAdjacentHTML('afterbegin', "<button type='button' class='nav-link btn dropdown-toggle' data-bs-toggle='dropdown'aria-expanded='false'>     <img src='"+user_now.img_url+"' class='rounded-circle' alt='profile_pic' />     <span class='name'>"+ user_now.display_name +"</span>     <i class='fas fa-chevron-down'></i> </button> <div class='dropdown-menu dropdown-menu-end'>     <a class='dropdown-item' href='#'><i class='fas fa-user-alt'></i> Profile <br /><button             class='btn success' onclick='profile_setup_page()'>View Profile</button></a><div class='dropdown-divider'></div> <a class='dropdown-item' href='#' onclick='home_setup_page()'><i class='fas fa-home'></i> Home</a> <div class='dropdown-divider'> </div> <a class='dropdown-item' href='#'><i class='fas fa-history'></i> History</a><div class='dropdown-divider'></div><a class='dropdown-item' href='#'><i class='fas fa-cog'></i> Settings</a><div class='dropdown-divider'></div><a class='dropdown-item' id='logout' href='#'><i class='fas fa-sign-out-alt'></i> Logout</a></div>");
+        cnsole.insertAdjacentHTML('afterbegin', "<button type='button' class='nav-link btn dropdown-toggle' data-bs-toggle='dropdown'aria-expanded='false'>     <img src='" + user_now.img_url + "' class='rounded-circle' alt='profile_pic' />     <span class='name'>" + user_now.display_name + "</span>     <i class='fas fa-chevron-down'></i> </button> <div class='dropdown-menu dropdown-menu-end'>     <a class='dropdown-item' href='#'><i class='fas fa-user-alt'></i> Profile <br /><button             class='btn success' onclick='profile_setup_page()'>View Profile</button></a><div class='dropdown-divider'></div> <a class='dropdown-item' href='#' onclick='home_setup_page()'><i class='fas fa-home'></i> Home</a> <div class='dropdown-divider'> </div> <a class='dropdown-item' href='#'><i class='fas fa-history'></i> History</a><div class='dropdown-divider'></div><a class='dropdown-item' href='#'><i class='fas fa-cog'></i> Settings</a><div class='dropdown-divider'></div><a class='dropdown-item' id='logout' href='#'><i class='fas fa-sign-out-alt'></i> Logout</a></div>");
 
-    body_page.insertAdjacentHTML("afterbegin", `
+        body_page.insertAdjacentHTML("afterbegin", `
     <!-- section 1 -->
     <section id="Profile" class="container overflow-hidden">
         <div class="col-md-8 p-lg-5 mx-auto my-5">
@@ -15,7 +31,7 @@ function profile_setup_page() {
                 <div class="avatar-upload">
                     <div class="avatar-preview rounded-circle">
                         <div class="rounded-circle" id="imagePreview"
-                            style="background-image: url(`+user_now.img_url+`);"></div>
+                            style="background-image: url(`+ user_now.img_url + `);"></div>
                     </div>
                 </div>
                 <!-- <img id="imagePreview" src="/pictures/photo.png" class="rounded-circle d-block img_proflie" /> -->
@@ -33,7 +49,7 @@ function profile_setup_page() {
                     <!-- <div class="col-sm-5 col-md-4 p-0"> -->
                     <div class="col-10">
                         <input id="fname" type="text" class="form-control name-profile text-center fs-4"
-                            value="`+user_now.display_name+`" readonly />
+                            value="`+ user_now.display_name + `" readonly />
                     </div>
                     <!-- <div class="col-5 col-md-4 p-0"> -->
                     <!-- <input id="lname" type="text" class="form-control fs-4" size="ma" value="Chanbang" readonly /> -->
@@ -74,54 +90,54 @@ function profile_setup_page() {
     <!-- section 3 -->
     <section id="gallery" class="container overflow-hidden d-flex justify-content-center align-content-center p-0">
         <!-- grid image -->
-        <div class="container-fluid p-0 position-relative">
+        <div id="loop_insert_gal" class="container-fluid p-0 position-relative">
             <div class="bg-overay h-100 w-100 position-absolute"></div>
             <div class="row row-cols-4 row-cols-sm-4 row-cols-md-4 g-0">
                 <div class="col">
-                    <img src="/public/IMG/photo.png" class="card-img" alt="...">
+                    <img src="`+gallery_profile[ Number(Math.floor(Math.random() * gallery_profile.length))].image+`" class="card-img" alt="...">
                 </div>
                 <div class="col">
-                    <img src="/public/IMG/photo.png" class="card-img" alt="...">
+                    <img src="`+gallery_profile[ Number(Math.floor(Math.random() * gallery_profile.length))].image+`" class="card-img" alt="...">
                 </div>
                 <div class="col">
-                    <img src="/public/IMG/photo.png" class="card-img" alt="...">
+                    <img src="`+gallery_profile[ Number(Math.floor(Math.random() * gallery_profile.length))].image+`" class="card-img" alt="...">
                 </div>
                 <div class="col">
-                    <img src="/public/IMG/photo.png" class="card-img" alt="...">
-                </div>
-            </div>
-            <div class="row row-cols-4 row-cols-sm-4 row-cols-md-4 g-0">
-                <div class="col">
-                    <img src="/public/IMG/photo.png" class="card-img" alt="...">
-                </div>
-                <div class="col">
-                    <img src="/public/IMG/photo.png" class="card-img" alt="...">
-                </div>
-                <div class="col">
-                    <img src="/public/IMG/photo.png" class="card-img" alt="...">
-                </div>
-                <div class="col">
-                    <img src="/public/IMG/photo.png" class="card-img" alt="...">
+                    <img src="`+gallery_profile[ Number(Math.floor(Math.random() * gallery_profile.length))].image+`" class="card-img" alt="...">
                 </div>
             </div>
             <div class="row row-cols-4 row-cols-sm-4 row-cols-md-4 g-0">
                 <div class="col">
-                    <img src="/public/IMG/photo.png" class="card-img" alt="...">
+                    <img src="`+gallery_profile[ Number(Math.floor(Math.random() * gallery_profile.length))].image+`" class="card-img" alt="...">
                 </div>
                 <div class="col">
-                    <img src="/public/IMG/photo.png" class="card-img" alt="...">
+                    <img src="`+gallery_profile[ Number(Math.floor(Math.random() * gallery_profile.length))].image+`" class="card-img" alt="...">
                 </div>
                 <div class="col">
-                    <img src="/public/IMG/photo.png" class="card-img" alt="...">
+                    <img src="`+gallery_profile[ Number(Math.floor(Math.random() * gallery_profile.length))].image+`" class="card-img" alt="...">
                 </div>
                 <div class="col">
-                    <img src="/public/IMG/photo.png" class="card-img" alt="...">
+                    <img src="`+gallery_profile[ Number(Math.floor(Math.random() * gallery_profile.length))].image+`" class="card-img" alt="...">
+                </div>
+            </div>
+            <div class="row row-cols-4 row-cols-sm-4 row-cols-md-4 g-0">
+                <div class="col">
+                    <img src="`+gallery_profile[ Number(Math.floor(Math.random() * gallery_profile.length))].image+`" class="card-img" alt="...">
+                </div>
+                <div class="col">
+                    <img src="`+gallery_profile[ Number(Math.floor(Math.random() * gallery_profile.length))].image+`" class="card-img" alt="...">
+                </div>
+                <div class="col">
+                    <img src="`+gallery_profile[ Number(Math.floor(Math.random() * gallery_profile.length))].image+`" class="card-img" alt="...">
+                </div>
+                <div class="col">
+                    <img src="`+gallery_profile[ Number(Math.floor(Math.random() * gallery_profile.length))].image+`" class="card-img" alt="...">
                 </div>
             </div>
         </div>
         <div class="outer-ring rounded-circle position-absolute align-self-center shadow"></div>
         <div class="middle-ring rounded-circle position-absolute align-self-center"></div>
-        <div class="inner-ring rounded-circle position-absolute align-self-center"></div>
+        <div class="inner-ring rounded-circle position-absolute align-self-center" onclick="allitem_page()"></div>
         <div class="text-center position-absolute align-self-center my-auto mx-auto">
             <h1 class="display-2">30,000</h1>
             <h1>Piece</h1>
@@ -365,6 +381,6 @@ function profile_setup_page() {
             </div>
     </footer>
     `);
+    });
 
-  
 }
