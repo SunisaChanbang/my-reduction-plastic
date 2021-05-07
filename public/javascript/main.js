@@ -41,7 +41,6 @@ function auth_google() {
       user_now["email"] = user.email;
       user_now["img_url"] = user.photoURL;
       console.log(user.displayName, user.uid, user.email, user.photoURL);
-      login(user.displayName, "google-auth");
 
       // ...
     }).catch((error) => {

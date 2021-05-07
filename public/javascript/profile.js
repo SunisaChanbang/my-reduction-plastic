@@ -139,7 +139,7 @@ function profile_setup_page() {
         <div class="middle-ring rounded-circle position-absolute align-self-center"></div>
         <div class="inner-ring rounded-circle position-absolute align-self-center" onclick="allitem_page()"></div>
         <div class="text-center position-absolute align-self-center my-auto mx-auto">
-            <h1 class="display-2">30,000</h1>
+            <h1 class="display-2">`+user_storage.plastic_reduction.sum+`</h1>
             <h1>Piece</h1>
         </div>
     </section>
