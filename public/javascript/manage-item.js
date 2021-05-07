@@ -12,6 +12,25 @@ function add_plastics_reduction_list(type) {
         list.insertAdjacentHTML("beforeend", "<li id='" + type + "_addpanel'class='list-group-item p-0'> <div class='card mb-3 shadow'> <div class='row row-cols-3 g-0 d-flex justify-content-between'> <!-- upload image --> <div id='framePreview' class='col-md-4 position-relative'> <div class='col p-0 card-img-overlay'> <img id='imageAddPreview' class='card-img-start' src='/public/IMG/photo.png' alt='...'> </div> <input type='file' id='imageUpload_" + type + "' accept='.png, .jpg, .jpeg' /> </div> <!-- Name type --> <div class='col-md-6 p ps-md-4'> <div class='card-body p-0'> <h5 class='card-title my-1'>" + type + "</h5> <!-- quantity of plastic --> <p class='card-text'><div class='align-self-center'> <div class='w-100 btn-group shadow rounded-3' role='group'> <button class='btn' onclick='minusFunction(&quot;" + type + "&quot;)'>-</button> <input type='number' step='1' id='" + type + "' name='" + type + "' min='1' max='10' value='1' slot='2'> <button class='btn' onclick='plusFunction(&quot;" + type + "&quot;)'>+</button> </div> </div> </p> </div> </div> <div class='col-2 my-auto'> <!-- <button class='btn btn-remove btn-outline-primary' data-bs-toggle='modal' data-bs-target='#delete'> <i class='fas fa-trash-alt'></i> </button> --> <a class='btn btn-remove btn-outline-primary' data-bs-toggle='modal' href='#delete' role='button' onclick='pre_delete_item(&quot;" + type + "&quot;);'><i class='fas fa-trash-alt'></i></a> </div> </div> </div> </li>");
     }
 }
+
+function image_profile_Upload() {
+    file_image = document.querySelector("#image-profile-Upload").files[0];
+    name_image = +new Date() + "";
+    user_ref = ref.child(user_now.username + "/" + "profile-image");
+    metadata = {
+        contentType: file_image.type
+    };
+    task = user_ref.child(name_image).put(file_image, metadata);
+    task
+        .then(snapshot => snapshot.ref.getDownloadURL()).then(url => {
+            db.collection('users').doc(user_now.username).set({
+                image: url
+            }, { merge: true });
+            document.getElementById("img-profile").innerHTML = '';
+            document.getElementById("img-profile").insertAdjacentHTML("beforeend", `<div class='rounded-circle' id='imagePreview'
+            style='background-image: url(`+ user_now.img_url + `);'></div>`)
+        });
+}
 function add_to_database() {
     if (add_item_list.length == 0) {
         alert("กรุณากรอกข้อมูลให้ครบ");
@@ -186,7 +205,7 @@ function delete_item() {
 }
 
 
-function allitem_page(){
+function allitem_page() {
     db.collection("users").doc(user_now.username).get().then((doc) => {
         user_storage = doc.data();
         user_straw_rd = user_storage.plastic_reduction.straw_type;
@@ -195,9 +214,9 @@ function allitem_page(){
         user_bottle_rd = user_storage.plastic_reduction.bottle_type;
         user_bag_rd = user_storage.plastic_reduction.bag_type;
         user_cutlery_rd = user_storage.plastic_reduction.bag_type;
-    
-    body_page.innerHTML = '';
-    body_page.insertAdjacentHTML("afterbegin", `<p></p>
+
+        body_page.innerHTML = '';
+        body_page.insertAdjacentHTML("afterbegin", `<p></p>
     <div class="all_item">
 
         <div class="menu" onclick="">
@@ -247,86 +266,86 @@ function allitem_page(){
         </div>
     </div>`);
 
-    item_page = document.getElementById("show-list-item")
+        item_page = document.getElementById("show-list-item")
 
-    for (i in user_straw_rd){
-        if(user_straw_rd[i].image != undefined){
-            console.log(user_straw_rd[i])
-            item_page.insertAdjacentHTML("afterbegin", `
+        for (i in user_straw_rd) {
+            if (user_straw_rd[i].image != undefined) {
+                console.log(user_straw_rd[i])
+                item_page.insertAdjacentHTML("afterbegin", `
                 <div class="col-3 text-center">
-                    <img src="`+user_straw_rd[i].image+`" alt="">
+                    <img src="`+ user_straw_rd[i].image + `" alt="">
                 </div>`);
+            }
         }
-    }
     });
 
 }
 
-function show_item_page(type){
+function show_item_page(type) {
     item_page = document.getElementById("show-list-item")
     item_page.innerHTML = "";
-    if(type == 'straw'){
-        for (i in user_straw_rd){
-            if(user_straw_rd[i].image != undefined){
+    if (type == 'straw') {
+        for (i in user_straw_rd) {
+            if (user_straw_rd[i].image != undefined) {
                 console.log(user_straw_rd[i])
                 item_page.insertAdjacentHTML("afterbegin", `
                     <div class="col-3 text-center">
-                        <img src="`+user_straw_rd[i].image+`" alt="">
+                        <img src="`+ user_straw_rd[i].image + `" alt="">
                     </div>`);
             }
         }
     }
-    else if(type == 'cup'){
-        for (i in user_cup_rd){
-            if(user_cup_rd[i].image != undefined){
+    else if (type == 'cup') {
+        for (i in user_cup_rd) {
+            if (user_cup_rd[i].image != undefined) {
                 console.log(user_cup_rd[i])
                 item_page.insertAdjacentHTML("afterbegin", `
                     <div class="col-3 text-center">
-                        <img src="`+user_cup_rd[i].image+`" alt="">
+                        <img src="`+ user_cup_rd[i].image + `" alt="">
                     </div>`);
             }
         }
     }
-    else if(type == 'package'){
-        for (i in user_package_rd){
-            if(user_package_rd[i].image != undefined){
+    else if (type == 'package') {
+        for (i in user_package_rd) {
+            if (user_package_rd[i].image != undefined) {
                 console.log(user_package_rd[i])
                 item_page.insertAdjacentHTML("afterbegin", `
                     <div class="col-3 text-center">
-                        <img src="`+user_package_rd[i].image+`" alt="">
+                        <img src="`+ user_package_rd[i].image + `" alt="">
                     </div>`);
             }
         }
     }
-    else if(type == 'bottle'){
-        for (i in user_bottle_rd){
-            if(user_bottle_rd[i].image != undefined){
+    else if (type == 'bottle') {
+        for (i in user_bottle_rd) {
+            if (user_bottle_rd[i].image != undefined) {
                 console.log(user_bottle_rd[i])
                 item_page.insertAdjacentHTML("afterbegin", `
                     <div class="col-3 text-center">
-                        <img src="`+user_bottle_rd[i].image+`" alt="">
+                        <img src="`+ user_bottle_rd[i].image + `" alt="">
                     </div>`);
             }
         }
     }
-    else if(type == 'bag'){
-        for (i in user_bag_rd){
-            if(user_bag_rd[i].image != undefined){
+    else if (type == 'bag') {
+        for (i in user_bag_rd) {
+            if (user_bag_rd[i].image != undefined) {
                 console.log(user_bag_rd[i])
                 item_page.insertAdjacentHTML("afterbegin", `
                     <div class="col-3 text-center">
-                        <img src="`+user_bag_rd[i].image+`" alt="">
+                        <img src="`+ user_bag_rd[i].image + `" alt="">
                     </div>`);
             }
         }
     }
-    else if(type == 'cutlery'){
-        for (i in user_cutlery_rd){
-            if(user_cutlery_rd[i].image != undefined){
+    else if (type == 'cutlery') {
+        for (i in user_cutlery_rd) {
+            if (user_cutlery_rd[i].image != undefined) {
                 console.log(user_cutlery_rd[i])
                 item_page.insertAdjacentHTML("afterbegin", `
                     <div class="col-3 text-center">
-                        <img src="`+user_cutlery_rd[i].image+`" alt="">
+                        <img src="`+ user_cutlery_rd[i].image + `" alt="">
                     </div>`);
             }
         }

@@ -29,7 +29,7 @@ function profile_setup_page() {
         <div class="col-md-8 p-lg-5 mx-auto my-5">
             <div class="mx-auto block position-relative">
                 <div class="avatar-upload">
-                    <div class="avatar-preview rounded-circle">
+                    <div id="img-profile"class="avatar-preview rounded-circle">
                         <div class="rounded-circle" id="imagePreview"
                             style="background-image: url(`+ user_now.img_url + `);"></div>
                     </div>
@@ -39,7 +39,7 @@ function profile_setup_page() {
                 <button class="btn avatar-edit default rounded-circle position-absolute bottom-0 end-0">
                     <!-- type="button" data-bs-toggle="modal" data-bs-target="#uploadimageModal" -->
                     <i class="fas fa-camera"></i>
-                    <input type="file" id="imageUpload" accept=".png, .jpg, .jpeg" />
+                    <input type="file" id="image-profile-Upload" accept=".png, .jpg, .jpeg" onchange='image_profile_Upload()' />
                 </button>
 
             </div>

@@ -22,6 +22,7 @@ var database = firebase.database();
 var db = firebase.firestore();
 firebase.analytics();
 var storage = firebase.storage();
+var ref = firebase.storage().ref();
 var starCountRef = firebase.database().ref('users');
 function auth_google() {
   var provider = new firebase.auth.GoogleAuthProvider();
