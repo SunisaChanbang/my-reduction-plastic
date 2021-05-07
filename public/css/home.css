@@ -133,11 +133,9 @@ html {
   height: 100%;
 }
 
-/* body {
-  background: #FFF;
-  color: #111;
+body {
   height: 100%;
-} */
+}
 
 
 q.head-text {
@@ -162,7 +160,7 @@ q.head-text {
   background: url(/public/IMG/index/plastic.jpg) no-repeat fixed 100% 100%;
   background-size: cover;
   color: var(--main-txt-color);
-  height: 100vh;
+  height: 100%;
   width: 100%;
   text-align: center;
 }
@@ -364,6 +362,7 @@ a.text-read:hover {
 }
 
 .text-read p {
+  color: var(--main-txt-color);
   text-align: end;
 
 }
@@ -423,4 +422,21 @@ footer {
   font-size: 12px;
   letter-spacing: 2px;
   text-decoration: none;
+}
+
+.btns {
+  cursor: pointer;
+  text-align: center;
+  margin: 5px;
+  padding: .6em .8em .8em;
+  border: none;
+  border-radius: 5px;
+  box-shadow: inset 0 -.2em rgba(0, 0, 0, .2);
+  outline: 0;
+  transition: .2s;
+  will-change: transform;
+}
+
+.btns:active {
+  transform: scale(.9);
 }

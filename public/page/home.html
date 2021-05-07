@@ -69,7 +69,9 @@
     <div id="bannertext">
       <h1 class="display-3 bannertext">วันนี้คุณใช้พลาสติกไปแล้วกี่ชิ้น ?</h1>
       <p class="bannertext">มาร่วมบันทึกสถิติการลดขยะพลาสติกของคุณกัน !</p>
-      <a href="#" onclick="profile_setup_page()" class="btn btn-outline-success">เข้าร่วม</a>
+      <div class="buttons">
+        <button id="play" class="btns success" onclick="profile_setup_page()">เข้าร่วม</button>
+      </div>
     </div>
   </div>
 
@@ -112,91 +114,94 @@
       <div class="col-sm-12 col-lg-6 p-3 rank">
         <img src="/public/IMG/success.png" alt="" class="img-fluid rank-logo">
         <h2>Rank Of Week</h2>
-        <table class="table-sm table table-responsive table-striped table-hover table-borderless">
-          <thead>
-            <tr>
-              <th scope="col">Rank</th>
-              <th scope="col">Member</th>
-              <th scope="col"></th>
-              <th scope="col"></th>
-              <th scope="col">Points</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td><img src="/public/IMG/user.png" alt=""></td>
-              <td colspan="2">Name Lastname</td>
-              <td>4304
-              </td>
-              <td><img src="/public/IMG/rank/gold.png" alt=""></td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td><img src="/public/IMG/user.png" alt=""></td>
-              <td colspan="2">Name Lastname</td>
-              <td>4304
-              </td>
-              <td><img src="/public/IMG/rank/gold.png" alt=""></td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td><img src="/public/IMG/user.png" alt=""></td>
-              <td colspan="2">Name Lastname</td>
-              <td>4304</td>
-              <td><img src="/public/IMG/rank/gold.png" alt=""></td>
-            </tr>
-            <tr>
-              <th scope="row">4</th>
-              <td><img src="/public/IMG/user.png" alt=""></td>
-              <td colspan="2">Name Lastname</td>
-              <td>4304</td>
-              <td><img src="/public/IMG/rank/gold.png" alt=""></td>
-            </tr>
-            <tr>
-              <th scope="row">5</th>
-              <td><img src="/public/IMG/user.png" alt=""></td>
-              <td colspan="2">Name Lastname</td>
-              <td>4304</td>
-              <td><img src="/public/IMG/rank/gold.png" alt=""></td>
-            </tr>
-            <tr>
-              <th scope="row">6</th>
-              <td><img src="/public/IMG/user.png" alt=""></td>
-              <td colspan="2">Name Lastname</td>
-              <td>4304</td>
-              <td><img src="/public/IMG/rank/gold.png" alt=""></td>
-            </tr>
-            <tr>
-              <th scope="row">7</th>
-              <td><img src="/public/IMG/user.png" alt=""></td>
-              <td colspan="2">Name Lastname</td>
-              <td>4304</td>
-              <td><img src="/public/IMG/rank/gold.png" alt=""></td>
-            </tr>
-            <tr>
-              <th scope="row">8</th>
-              <td><img src="/public/IMG/user.png" alt=""></td>
-              <td colspan="2">Name Lastname</td>
-              <td>4304</td>
-              <td><img src="/public/IMG/rank/gold.png" alt=""></td>
-            </tr>
-            <tr>
-              <th scope="row">9</th>
-              <td><img src="/public/IMG/user.png" alt=""></td>
-              <td colspan="2">Name Lastname</td>
-              <td>4304</td>
-              <td><img src="/public/IMG/rank/gold.png" alt=""></td>
-            </tr>
-            <tr>
-              <th scope="row">10</th>
-              <td><img src="/public/IMG/user.png" alt=""></td>
-              <td colspan="2">Name Lastname</td>
-              <td>4304</td>
-              <td><img src="/public/IMG/rank/gold.png" alt=""></td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="table-responsive">
+          <table class="table-sm table table-striped table-hover table-borderless">
+            <thead>
+              <tr>
+                <th scope="col">Rank</th>
+                <th scope="col">Member</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+                <th scope="col">Points</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td><img src="/public/IMG/user.png" alt=""></td>
+                <td colspan="2">Name Lastname</td>
+                <td>4304
+                </td>
+                <td class="d-none d-md-table-cell"><img src="/public/IMG/rank/gold.png" alt=""></td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td><img src="/public/IMG/user.png" alt=""></td>
+                <td colspan="2">Name Lastname</td>
+                <td>4304
+                </td>
+                <td class="d-none d-md-table-cell"><img src="/public/IMG/rank/gold.png" alt=""></td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td><img src="/public/IMG/user.png" alt=""></td>
+                <td colspan="2">Name Lastname</td>
+                <td>4304</td>
+                <td class="d-none d-md-table-cell"><img src="/public/IMG/rank/gold.png" alt=""></td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td><img src="/public/IMG/user.png" alt=""></td>
+                <td colspan="2">Name Lastname</td>
+                <td>4304</td>
+                <td class="d-none d-md-table-cell"><img src="/public/IMG/rank/gold.png" alt=""></td>
+              </tr>
+              <tr>
+                <th scope="row">5</th>
+                <td><img src="/public/IMG/user.png" alt=""></td>
+                <td colspan="2">Name Lastname</td>
+                <td>4304</td>
+                <td class="d-none d-md-table-cell"><img src="/public/IMG/rank/gold.png" alt=""></td>
+              </tr>
+              <tr>
+                <th scope="row">6</th>
+                <td><img src="/public/IMG/user.png" alt=""></td>
+                <td colspan="2">Name Lastname</td>
+                <td>4304</td>
+                <td class="d-none d-md-table-cell"><img src="/public/IMG/rank/gold.png" alt=""></td>
+              </tr>
+              <tr>
+                <th scope="row">7</th>
+                <td><img src="/public/IMG/user.png" alt=""></td>
+                <td colspan="2">Name Lastname</td>
+                <td>4304</td>
+                <td class="d-none d-md-table-cell"><img src="/public/IMG/rank/gold.png" alt=""></td>
+              </tr>
+              <tr>
+                <th scope="row">8</th>
+                <td><img src="/public/IMG/user.png" alt=""></td>
+                <td colspan="2">Name Lastname</td>
+                <td>4304</td>
+                <td class="d-none d-md-table-cell"><img src="/public/IMG/rank/gold.png" alt=""></td>
+              </tr>
+              <tr>
+                <th scope="row">9</th>
+                <td><img src="/public/IMG/user.png" alt=""></td>
+                <td colspan="2">Name Lastname</td>
+                <td>4304</td>
+                <td class="d-none d-md-table-cell"><img src="/public/IMG/rank/gold.png" alt=""></td>
+              </tr>
+              <tr>
+                <th scope="row">10</th>
+                <td><img src="/public/IMG/user.png" alt=""></td>
+                <td colspan="2">Name Lastname</td>
+                <td>4304</td>
+                <td class="d-none d-md-table-cell"><img src="/public/IMG/rank/gold.png" alt=""></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
       </div>
 
       <div class="col-lg-6 p-4 challenge">
@@ -225,7 +230,7 @@
 
     <div class="row justify-content-space-between p-4 mt-2" id="article">
       <h2>บทความล่าสุด</h2>
-      <div class="col-sm-4 col-lg-4" data-aos="fade-up">
+      <div class="col-md-12 col-lg-4" data-aos="fade-up">
         <article class="card card--1">
           <div class="card__img"></div>
           <a href="content_01.html" class="card_link" onclick="content01_setup_page()">
@@ -242,7 +247,7 @@
           </div>
         </article>
       </div>
-      <div class="col-sm-4 col-lg-4" data-aos="fade-up">
+      <div class="col-md-12 col-lg-4" data-aos="fade-up">
         <article class="card card--2">
           <div class="card__img"></div>
           <a href="content_02.html" class="card_link" onclick="content02_setup_page()">
@@ -259,7 +264,7 @@
           </div>
         </article>
       </div>
-      <div class="col-sm-4 col-lg-4" data-aos="fade-up">
+      <div class="col-md-12 col-lg-4" data-aos="fade-up">
         <article class="card card--3">
           <div class="card__img"></div>
           <a href="content_03.html" class="card_link" onclick="content03_setup_page()">
