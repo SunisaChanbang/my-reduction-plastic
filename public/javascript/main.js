@@ -2,7 +2,7 @@ var CONTAINER = document.getElementById("content");
 var PROFILE = document.getElementById("profile");
 var NAVBAR_RIGHT = document.getElementById("navbar_right");
 var POPUP = document.getElementsByClassName("popup");
-var user_now = { display_name: "", username: "", email: "", img_url: "" };
+var user_now = { display_name: "", username: "", email: "", img_url: "", plastic_reduction: ""};
 var user_storage;
 
 var firebaseConfig = {
@@ -57,6 +57,7 @@ function auth_google() {
     username = document.getElementById("username").value;
     password = document.getElementById("password").value;
     sign_in(username, password);
+    calPlastic();
   }
   
   var not_found_user = true; // 0 = NOT BE USER
@@ -66,7 +67,7 @@ function auth_google() {
       querySnapshot.forEach((doc) => {
 
         // BE USER
-        if (doc.id == username) {
+        if (doc.id == username && doc.id == password) {
           alert('This be user');
           not_found_user = false;
           user_storage = doc.data();
@@ -156,4 +157,9 @@ function auth_google() {
       });
   }
 
-  
+
+function calPlastic() {
+  db.collection("users").doc(user_storage = doc.data()).get().then((doc) =>{
+  console.log.bottle_type;
+  })
+}
