@@ -38,17 +38,6 @@ function profile_setup_page() {
         cnsole.insertAdjacentHTML('afterbegin', "<button type='button' class='nav-link btn dropdown-toggle' data-bs-toggle='dropdown'aria-expanded='false'>     <img src='" + user_now.img_url + "' class='rounded-circle' alt='profile_pic' />     <span class='name'>" + user_now.display_name + "</span>     <i class='fas fa-chevron-down'></i> </button> <div class='dropdown-menu dropdown-menu-end'>     <a class='dropdown-item' href='#'><i class='fas fa-user-alt'></i> Profile <br /><button             class='btn success' onclick='profile_setup_page()'>View Profile</button></a><div class='dropdown-divider'></div> <a class='dropdown-item' href='#' onclick='home_setup_page()'><i class='fas fa-home'></i> Home</a> <div class='dropdown-divider'> </div> <a class='dropdown-item' href='#'><i class='fas fa-history'></i> History</a><div class='dropdown-divider'></div><a class='dropdown-item' href='#'><i class='fas fa-cog'></i> Settings</a><div class='dropdown-divider'></div><a class='dropdown-item' id='logout' href='#'><i class='fas fa-sign-out-alt'></i> Logout</a></div>");
 
         body_page.insertAdjacentHTML("afterbegin", `
-        <div class="backdrop">
-        <div class="rounded-circle bg-white shadow-lg"></div>
-        <div class="loading">
-            <div class="hourglass">
-            </div>
-            <div class="cell">
-                <div class="pl pl-hourglass shadow-lg"></div>
-            </div>
-
-        </div>
-    </div>
     <!-- section 1 -->
     <section id="Profile" class="container overflow-hidden">
         <div class="col-md-8 p-lg-5 mx-auto my-5">
@@ -400,13 +389,6 @@ function profile_setup_page() {
         </div>
       </div>
   </footer>
-  <script>
-        $(document).ready(function () {
-            // alert( "document loaded" );
-            console.log("document loaded")
-            $(".backdrop").fadeOut(600);
-        });
-    </script>
     `);
 
     });

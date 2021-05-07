@@ -16,17 +16,6 @@ function home_setup_page() {
   
     body_page.insertAdjacentHTML("afterbegin",
         `
-        <div class="backdrop">
-        <div class="rounded-circle bg-white shadow-lg"></div>
-        <div class="loading">
-            <div class="hourglass">
-            </div>
-            <div class="cell">
-                <div class="pl pl-hourglass shadow-lg"></div>
-            </div>
-
-        </div>
-    </div>
         <!--------------- Carousel --------------->
         <link href='https://fonts.googleapis.com/css?family=Droid+Sans:700|Droid+Serif' rel='stylesheet' type='text/css'>
       
@@ -290,13 +279,6 @@ function home_setup_page() {
               </div>
             </div>
         </footer>
-        <script>
-        $(document).ready(function () {
-            // alert( "document loaded" );
-            console.log("document loaded")
-            $(".backdrop").fadeOut(600);
-        });
-        </script>
         `
     );
 }

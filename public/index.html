@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="/public/css/home.css" />
     <!-- aos -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="/public/css/loading.css" />
     <title>My Reduction Plastic</title>
     <link rel="icon" href="/public/IMG/recycle.png" sizes="16x16 32x32" type="image/png" />
 
@@ -222,6 +223,13 @@
     <script src="/public/javascript/content_04.js"></script>
     <script src="/public/javascript/content_05.js"></script>
     <script src="/public/javascript/content_06.js"></script>
+    <script>
+        $(document).ready(function () {
+            // alert( "document loaded" );
+            console.log("document loaded")
+            $(".backdrop").fadeOut(600);
+        });
+    </script>
 </body>
 
 </html>
