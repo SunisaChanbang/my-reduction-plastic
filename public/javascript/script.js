@@ -159,3 +159,9 @@ console.log("nWatt : " + nWatt.innerHTML);
 console.log("nHours : " + nHours.innerHTML);
 
 
+
+$( document ).ready(function() {
+    // alert( "document loaded" );
+    console.log("document loaded")
+    $(".backdrop").fadeOut(600);
+});
