@@ -16,7 +16,7 @@ function add_plastics_reduction_list(type) {
 function image_profile_Upload() {
     file_image = document.querySelector("#image-profile-Upload").files[0];
     name_image = +new Date() + "";
-    user_ref = ref.child(user_now.username + "/" + "profile-image");
+    user_ref = ref.child(user_now.username + "/" + "profile-image/");
     metadata = {
         contentType: file_image.type
     };
@@ -26,9 +26,6 @@ function image_profile_Upload() {
             db.collection('users').doc(user_now.username).set({
                 image: url
             }, { merge: true });
-            document.getElementById("img-profile").innerHTML = '';
-            document.getElementById("img-profile").insertAdjacentHTML("beforeend", `<div class='rounded-circle' id='imagePreview'
-            style='background-image: url(`+ user_now.img_url + `);'></div>`)
         });
 }
 function add_to_database() {

@@ -1,6 +1,7 @@
 var gallery_profile = [];
 var user_straw_rd, user_cup_rd, user_package_rd, user_bottle_rd, user_bag_rd, user_cutlery_rd;
-
+var gal_1 = 'https://image.flaticon.com/icons/png/128/2666/2666751.png', gal_2 = 'https://image.flaticon.com/icons/png/128/2666/2666751.png', gal_3 = 'https://image.flaticon.com/icons/png/128/2666/2666751.png', gal_4 = 'https://image.flaticon.com/icons/png/128/2666/2666751.png', gal_5 = 'https://image.flaticon.com/icons/png/128/2666/2666751.png', gal_6 = 'https://image.flaticon.com/icons/png/128/2666/2666751.png', 
+gal_7 = 'https://image.flaticon.com/icons/png/128/2666/2666751.png', gal_8 = 'https://image.flaticon.com/icons/png/128/2666/2666751.png', gal_9 = 'https://image.flaticon.com/icons/png/128/2666/2666751.png', gal_10 = 'https://image.flaticon.com/icons/png/128/2666/2666751.png', gal_11 = 'https://image.flaticon.com/icons/png/128/2666/2666751.png', gal_12  = 'https://image.flaticon.com/icons/png/128/2666/2666751.png';
 
 function profile_setup_page() {
     db.collection("users").doc(user_now.username).get().then((doc) => {
@@ -17,6 +18,19 @@ function profile_setup_page() {
         for (i in user_bottle_rd) { if (user_bottle_rd[i].image != undefined) { gallery_profile.push(user_bottle_rd[i]); } }
         for (i in user_bag_rd) { if (user_bag_rd[i].image != undefined) { gallery_profile.push(user_bag_rd[i]); } }
         for (i in user_cutlery_rd) { if (user_cutlery_rd[i].image != undefined) { gallery_profile.push(user_cutlery_rd[i]); } }
+        if(gallery_profile[0] != undefined){gal_1 = gallery_profile[ Number(Math.floor(Math.random() * gallery_profile.length))].image}
+        if(gallery_profile[0] != undefined){gal_2 = gallery_profile[ Number(Math.floor(Math.random() * gallery_profile.length))].image}
+        if(gallery_profile[0] != undefined){gal_3 = gallery_profile[ Number(Math.floor(Math.random() * gallery_profile.length))].image}
+        if(gallery_profile[0] != undefined){gal_4 = gallery_profile[ Number(Math.floor(Math.random() * gallery_profile.length))].image}
+        if(gallery_profile[0] != undefined){gal_5 = gallery_profile[ Number(Math.floor(Math.random() * gallery_profile.length))].image}
+        if(gallery_profile[0] != undefined){gal_6 = gallery_profile[ Number(Math.floor(Math.random() * gallery_profile.length))].image}
+        if(gallery_profile[0] != undefined){gal_7 = gallery_profile[ Number(Math.floor(Math.random() * gallery_profile.length))].image}
+        if(gallery_profile[0] != undefined){gal_8 = gallery_profile[ Number(Math.floor(Math.random() * gallery_profile.length))].image}
+        if(gallery_profile[0] != undefined){gal_9 = gallery_profile[ Number(Math.floor(Math.random() * gallery_profile.length))].image}
+        if(gallery_profile[0] != undefined){gal_10 = gallery_profile[ Number(Math.floor(Math.random() * gallery_profile.length))].image}
+        if(gallery_profile[0] != undefined){gal_11 = gallery_profile[ Number(Math.floor(Math.random() * gallery_profile.length))].image}
+        if(gallery_profile[0] != undefined){gal_12 = gallery_profile[ Number(Math.floor(Math.random() * gallery_profile.length))].image}
+      
 
         cnsole.innerHTML = "";
         body_page.innerHTML = "";
@@ -94,44 +108,44 @@ function profile_setup_page() {
             <div class="bg-overay h-100 w-100 position-absolute"></div>
             <div class="row row-cols-4 row-cols-sm-4 row-cols-md-4 g-0">
                 <div class="col">
-                    <img src="`+gallery_profile[ Number(Math.floor(Math.random() * gallery_profile.length))].image+`" class="card-img" alt="...">
+                    <img src="`+gal_1+`" class="card-img" alt="...">
                 </div>
                 <div class="col">
-                    <img src="`+gallery_profile[ Number(Math.floor(Math.random() * gallery_profile.length))].image+`" class="card-img" alt="...">
+                    <img src="`+gal_2+`" class="card-img" alt="...">
                 </div>
                 <div class="col">
-                    <img src="`+gallery_profile[ Number(Math.floor(Math.random() * gallery_profile.length))].image+`" class="card-img" alt="...">
+                    <img src="`+gal_3+`" class="card-img" alt="...">
                 </div>
                 <div class="col">
-                    <img src="`+gallery_profile[ Number(Math.floor(Math.random() * gallery_profile.length))].image+`" class="card-img" alt="...">
-                </div>
-            </div>
-            <div class="row row-cols-4 row-cols-sm-4 row-cols-md-4 g-0">
-                <div class="col">
-                    <img src="`+gallery_profile[ Number(Math.floor(Math.random() * gallery_profile.length))].image+`" class="card-img" alt="...">
-                </div>
-                <div class="col">
-                    <img src="`+gallery_profile[ Number(Math.floor(Math.random() * gallery_profile.length))].image+`" class="card-img" alt="...">
-                </div>
-                <div class="col">
-                    <img src="`+gallery_profile[ Number(Math.floor(Math.random() * gallery_profile.length))].image+`" class="card-img" alt="...">
-                </div>
-                <div class="col">
-                    <img src="`+gallery_profile[ Number(Math.floor(Math.random() * gallery_profile.length))].image+`" class="card-img" alt="...">
+                    <img src="`+gal_4+`" class="card-img" alt="...">
                 </div>
             </div>
             <div class="row row-cols-4 row-cols-sm-4 row-cols-md-4 g-0">
                 <div class="col">
-                    <img src="`+gallery_profile[ Number(Math.floor(Math.random() * gallery_profile.length))].image+`" class="card-img" alt="...">
+                    <img src="`+gal_5+`" class="card-img" alt="...">
                 </div>
                 <div class="col">
-                    <img src="`+gallery_profile[ Number(Math.floor(Math.random() * gallery_profile.length))].image+`" class="card-img" alt="...">
+                    <img src="`+gal_6+`" class="card-img" alt="...">
                 </div>
                 <div class="col">
-                    <img src="`+gallery_profile[ Number(Math.floor(Math.random() * gallery_profile.length))].image+`" class="card-img" alt="...">
+                    <img src="`+gal_7+`" class="card-img" alt="...">
                 </div>
                 <div class="col">
-                    <img src="`+gallery_profile[ Number(Math.floor(Math.random() * gallery_profile.length))].image+`" class="card-img" alt="...">
+                    <img src="`+gal_8+`" class="card-img" alt="...">
+                </div>
+            </div>
+            <div class="row row-cols-4 row-cols-sm-4 row-cols-md-4 g-0">
+                <div class="col">
+                    <img src="`+gal_9+`" class="card-img" alt="...">
+                </div>
+                <div class="col">
+                    <img src="`+gal_10+`" class="card-img" alt="...">
+                </div>
+                <div class="col">
+                    <img src="`+gal_11+`" class="card-img" alt="...">
+                </div>
+                <div class="col">
+                    <img src="`+gal_12+`" class="card-img" alt="...">
                 </div>
             </div>
         </div>
