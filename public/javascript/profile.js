@@ -341,45 +341,40 @@ function profile_setup_page() {
     </div>
     <!--footer-->
     <footer>
-        <div class="container">
-            <div class="row align-items-start footer-text-l">
-                <div class="col-12 col-sm-6 col-md-5 col-lg-4">
-                    <h2>Contact</h2>
-                    <p>Faculty of Information Technology
-                        King Mongkut's Institute of Technology Ladkrabang
-                    <p>1, Chalong Krung 1, Ladkrabang, Bangkok 10520</p>
-                    </p>
-                </div>
+    <div class="container">
+      <div class="row align-items-start footer-text-l">
+        <div class="col-12 col-sm-6 col-md-5 col-lg-4">
+          <h2>Contact</h2>
+          <p>Faculty of Information Technology
+            King Mongkut's Institute of Technology Ladkrabang
+          <p>1, Chalong Krung 1, Ladkrabang, Bangkok 10520</p>
+          </p>
+        </div>
 
-                <div class="col-12 col-sm-6 col-md-5 col-lg-4">
-                    <a href="#">About Us</a> <br>
-                    <a href="#">Article</a> <br>
-                    <a href="#">Profile</a> <br>
-                    <a href="#">Challenge</a>
-                </div>
+        <div class="col-12 col-sm-6 col-md-5 col-lg-4">
+          <a href="home.html" onclick="home_setup_page()">Home</a> <br>
+          <a href="all_content.html" onclick="allcontent_setup_page()">Article</a> <br>
+          <a href="profile.html" onclick="profile_setup_page()">Profile</a> <br>
+          <a href="home.html" onclick="home_setup_page()">Challenge</a>
+        </div>
 
-                <div class="col-12 col-md-2 col-lg-4 my-2 my-md-0 d-flex align-self-stretch justify-content-end">
-                    <div class="round-button">
-                        <div class="round-button-circle"><a href="#" class="round-button">TO TOP</a></div>
-                    </div>
-                </div>
-                <hr>
-                <div class="row align-items-start">
-                    <div class="col-12 col-sm-6 col-md-6 col-lg-6" id="icon-contact">
-                        <a href="https://github.com/SunisaChanbang/my-reduction-plastic" target="_blank"><img
-                                src="/public/IMG/icon/github.svg" alt=""></a>
-                        <a href="https://twitter.com/KaponPang" target="_blank"><img
-                                src="/public/IMG/icon/facebook-app-logo.svg" alt=""></a>
-                        <a href="https://www.instagram.com/k.panggg/" target="_blank"><img
-                                src="/public/IMG/icon/instagram.svg" alt=""></a>
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-6 col-lg-6 text-end">
-                        <span>© Copyright 2021. All Right Reserved. Design My Reduction Plastic</span>
-                    </div>
-                </div>
-
-            </div>
-    </footer>
+        <div class="col-12 col-md-2 col-lg-4 my-2 my-md-0 d-flex align-self-stretch justify-content-end">
+          <div class="round-button">
+            <div class="round-button-circle"><a href="#" class="round-button">TO TOP</a></div>
+          </div>
+        </div>
+        <hr>
+        <div class="row align-items-start">
+          <div class="col-12 col-sm-6 col-md-6 col-lg-6" id="icon-contact">
+            <a href="https://github.com/SunisaChanbang/my-reduction-plastic" target="_blank"><img
+                src="/public/IMG/icon/github.svg" alt=""></a>
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-6 text-end">
+            <span>© Copyright 2021. All Right Reserved. Design My Reduction Plastic</span>
+          </div>
+        </div>
+      </div>
+  </footer>
     `);
     });
 
