@@ -23,7 +23,7 @@
   <!--------------- Navbar --------------->
   <nav class="navbar">
     <div class="container-fluid d-flex">
-      <a class="navbar-brand" href="home.html">
+      <a class="navbar-brand" href="#">
         <img src="/public/IMG/recycle.png" class="d-inline-block" />
         <span class="name">My Reduction Plastic</span>
       </a>
@@ -42,10 +42,13 @@
             <i class="fas fa-chevron-down"></i>
           </button>
           <div class="dropdown-menu dropdown-menu-end">
-            <a class="dropdown-item" href="#"><i class="fas fa-user-alt"></i> Profile <br /><button class="btn success">
+            <a class="dropdown-item" href="#"><i class="fas fa-user-alt"></i> Profile <br /><button class="btn success"
+                onclick="profile_setup_page()">
                 View Profile
               </button>
             </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#" onclick="home_setup_page()"><i class="fas fa-home"></i> Home</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#"><i class="fas fa-history"></i> History</a>
             <div class="dropdown-divider"></div>
@@ -67,12 +70,14 @@
 
     <!-------------- Content -------------->
     <div class="container pt-4">
-      <p class="nav-content"> <a href="home.html" onclick="home_setup_page()">หน้าหลัก</a> / <a href="all_content.html" onclick="allcontent_setup_page()">บทความ</a> / <span
-          class="nav-content-active">วิธีลดพลาสติกได้ง่ายๆ จากชีวิตประจำวัน</span></p>
+      <p class="nav-content"> <a href="home.html" onclick="home_setup_page()">หน้าหลัก</a> / <a href="all_content.html"
+          onclick="allcontent_setup_page()">บทความ</a> / <span class="nav-content-active">วิธีลดพลาสติกได้ง่ายๆ
+          จากชีวิตประจำวัน</span></p>
       <div class="row justify-content-space-between">
         <div class="col-lg-7">
           <h1>วิธีลดพลาสติกได้ง่ายๆ จากชีวิตประจำวัน</h1>
-          <p class="text-tags">Tags: <a href="">พลาสติกรีไซเคิล</a>, <a href="">วิธีลดพลาสติก</a> </p>
+          <p class="text-tags">Tags: <a href="tage01.html">พลาสติกรีไซเคิล</a>, <a href="tage05.html">วิธีลดพลาสติก</a>
+          </p>
           <h4>1. งดใช้หลอดพลาสติก</h4>
           <p>
             หลอด พลาสติก ย่อยสลายถึง 200 ปี เราจึงควรแจ้งพนักงานว่า “ไม่รับฝาปิดและหลอด” หรือใช้หลอดทางเลือก เช่น
