@@ -30,7 +30,6 @@
             <div class="cell">
                 <div class="pl pl-hourglass shadow-lg"></div>
             </div>
-
         </div>
     </div>
     <nav class="navbar">
@@ -532,7 +531,14 @@
     <script>
         AOS.init();
     </script>
-
+    <script>
+        $(document).ready(function () {
+            // alert( "document loaded" );
+            console.log("document loaded")
+            $(".backdrop").fadeOut(600);
+        });
+        // $('body').css("overflow","hidden");
+    </script>
 </body>
 
 </html>

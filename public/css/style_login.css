@@ -19,7 +19,8 @@
 body {
   padding-top: 4.2rem;
   padding-bottom: 4.2rem;
-  background: var(--main-txt-show_all-color)
+  background: var(--main-txt-show_all-color);
+  overflow: hidden;
 }
 
 a {

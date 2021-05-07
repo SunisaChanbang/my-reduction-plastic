@@ -21,6 +21,7 @@
   list-style: none;
   box-sizing: border-box;
   font-family: "Montserrat";
+  overflow: hidden;
 }
 
 body {
