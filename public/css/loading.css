@@ -98,8 +98,10 @@
       linear-gradient(135deg, rgb(67, 153, 130), rgb(162, 204, 119));
   }
 .bg-white{
-    width: 75vw;
-    height: 75vw;
+    width: 85vw;
+    height: 85vw;
+    max-width: 300px;
+    max-height: 300px;
     top: 50%;
     left: 0;
     right: 0;
@@ -176,7 +178,7 @@
 .pl-hourglass {
 	/* animation-name: hourglassA; */
 	background: #eaecec;
-    overflow: hidden;
+  overflow: hidden !important;
 	clip-path: polygon(7.5% 0,92.5% 0,52.5% 50%,92.5% 100%,7.5% 100%,47.5% 50%);
 	-webkit-clip-path: polygon(7.5% 0,92.5% 0,52.5% 50%,92.5% 100%,7.5% 100%,47.5% 50%); 
 }
