@@ -155,9 +155,3 @@ function auth_google() {
         return false;
       });
   }
-
-db.collection("users").get().then((snapshot) => {
-  snapshot.docs.forEach(doc => {
-    renderUser(doc);
-  })
-});
